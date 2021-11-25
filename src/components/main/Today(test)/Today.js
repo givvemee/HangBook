@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import BestSellersList from './BestSellersList';
 
-const BestSellerMain = () => {
-    const [bestSellers, setBestSellers] = useState([]);
+const Main = () => {
+    const [recommend, setRecommend] = useState(null);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const bestSellersApi = 'https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=ttb201403672030001&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101'
@@ -12,10 +11,9 @@ const BestSellerMain = () => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
-                setLoading(true)
-                console.log(res.data.item)
-                setError(null)
-                setBestSellers(res.data.item)
+                console.log(res.data.item[4])
+                console.log(Math.random(res.data.item) * res.data.item.length)
+                setRecommend(Math.random(res.data.item))
             } catch (e) {
                 setError(e)
             }
@@ -23,6 +21,7 @@ const BestSellerMain = () => {
         }
         getData()
     }, [])
+
     if (loading) {
         return <div>Now Loading...</div>
     }
@@ -31,12 +30,9 @@ const BestSellerMain = () => {
     }
     return (
         <div>
-            <h2>Best Sellers</h2>
-            {
-                bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items}/>)
-            }
+            <h2>오늘의 책</h2>
         </div>
     );
 };
 
-export default BestSellerMain;
+export default Main;

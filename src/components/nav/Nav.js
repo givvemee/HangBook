@@ -6,7 +6,7 @@ const navList = [
     {id: 1, tap: 'Main', path: '/'},
     {id: 2, tap: 'Best Sellers', path: '/bestSellers'},
     {id: 3, tap: 'Search Books', path: '/searchBooks'},
-    {id: 4, tap: 'My Bookshelf', path: '/myBookshelf'}
+    {id: 4, tap: "Today's Book", path: '/todays'}
 ]
 const Nav = () => {
     return (

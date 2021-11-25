@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import BestSellerMain from './components/main/bestSellers/BestSellerMain';
 import Main from './components/main/Main';
 import Nav from './components/nav/Nav';
+import Today from './components/main/Today(test)/Today'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Switch>
         <Route path="/" component={Main} exact={true} />
         <Route path="/bestSellers" component={BestSellerMain} />
+        <Route path="/todays" component={Today} />
       </Switch>
     </Router>
   </>
