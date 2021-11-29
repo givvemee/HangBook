@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
-const SearchBookInput = () => {
-    const [keyword, setkeyword] = useState('apple')
-    const apiKey = 'ttb201403672030001'
-    const searchApi = `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=xml&Version=20070901`
+const SearchBookInput = ({searching}) => {
+    const textRef = useRef()
+    const [ text , setText ] = useState('')
 
-    console.log(searchApi)
+    const onSubmit = (e) => {
+        e.preventDefault() 
+        if (!text) return;
+        // text 를 전달
+        searching(text)
+        setText('')
+        textRef.current.focus()
+    }
+
     return (
-        <div>
-            <h2>책 검색하기</h2>
-            <div>
-                <input type="text" />
-            </div>
-        </div>
+        <form onSubmit={onSubmit}>
+            <input type="text" placeholder="책 제목을 입력하세요." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
+            <button type="submit">찾기</button>
+        </form>
     );
 };
 

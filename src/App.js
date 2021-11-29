@@ -5,7 +5,8 @@ import BestSellerMain from './components/main/bestSellers/BestSellerMain';
 import Main from './components/main/Main';
 import Nav from './components/nav/Nav';
 import Today from './components/main/Today(test)/Today'
-import SearchBookInput from './components/main/searchBooks/SearchBookInput';
+import SearchBookMain from './components/main/searchBooks/SearchBookMain';
+// import SearchBookMain from './components/main/searchBooks/SearchBookMain';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
       <Switch>
         <Route path="/" component={Main} exact={true} />
         <Route path="/bestSellers" component={BestSellerMain} />
-        <Route path="/searchBooks" component={SearchBookInput} />
+        <Route path="/searchBooks" component={SearchBookMain} />
         <Route path="/todays" component={Today} />
       </Switch>
     </Router>
