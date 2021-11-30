@@ -1,11 +1,11 @@
 import React from 'react';
 import SearchBookSub from './SearchBookSub';
 
-const SearchBookCont = ({searchBooks}) => {
+const SearchBookCont = ({data}) => {
     return (
         <div>
             {
-                searchBooks.map(books => <SearchBookSub key={books.isbn13} books={books}/>)
+                data.map(books => <SearchBookSub key={books.isbn13} books={books}/>)
             }
         </div>
     );

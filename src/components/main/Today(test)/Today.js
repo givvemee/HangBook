@@ -12,16 +12,18 @@ const Main = () => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
-                console.log(Math.floor(Math.random(res.data.item) * res.data.item.length))
+                // console.log(Math.floor(Math.random(res.data.item) * res.data.item.length))
                 console.log(res.data.item[Math.floor(Math.random(res.data.item) * res.data.item.length)])
-                setRecommend(Math.floor(Math.random(res.data.item) * res.data.item.length))
+                setRecommend(res.data.item[Math.floor(Math.random(res.data.item) * res.data.item.length)])
             } catch (e) {
                 setError(e)
             }
             setLoading(false)
         }
         getData()
+        console.log(setRecommend)
     }, [])
+    console.log(recommend)
 
     if (loading) {
         return <div>Now Loading...</div>
@@ -31,10 +33,10 @@ const Main = () => {
     }
     return (
         <div>
-            <h2>오늘의 책</h2>
-            <div>
-                
-            </div>
+            <h2>Tdy</h2>
+            {
+                recommend && <TodayItem recommend={recommend}/>
+            }
         </div>
     );
 };

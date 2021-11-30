@@ -5,65 +5,47 @@ import SearchBookInput from './SearchBookInput';
 import XMLParser from 'react-xml-parser';
 
 const SearchBookMain = () => {
-    const [searchBooks, setSearchBooks] = useState([])
+    const [data , setData] = useState([])
     const [isLoading , setIsLoading] = useState(true)
     const [error , setError] = useState('')
     const [keyword, setkeyword] = useState('apple')
     
     const apiKey = 'ttb201403672030001'
-    const searchApi = `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=xml&Version=20070901`
+    const searchApi = `http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
    
-    // useEffect(() => {
-    //     const searchData = async () => {
-    //         try {
-    //             const res = await axios.get(searchApi)
-    //             setIsLoading(true)
-    //             console.log(res.data.item)
-    //             setError(null)
-    //             setSearchBooks(res.data.item)
-    //         } catch (e) {
-    //             setError(e)
-    //         }
-    //         setIsLoading(false)
-    //     }
-    //     searchData()
-    // }, [keyword])
-
-    
-
     useEffect(() => {
-        axios.get(searchApi)
-            .then(res => {
-                setSearchBooks(res.data.item)
-                setIsLoading(false)
-                setError('')
-            })
-            .then(response => {
-                var xml = new XMLParser().parseFromString(response)
-                console.log(xml)
-            })
-            .catch ( e => {
-                setSearchBooks([])
-                setIsLoading(false)
+        const searchData = async () => {
+            try {
+                const res = await axios.get(searchApi)
+                // console.log(JSON.stringify(res.data.item))
+                console.log(res.data)
+
+                console.log(res.data)
+                setIsLoading(true)
+                setError(null)
+                setData(res.data.item)
+            } catch (e) {
                 setError('Something went wrong')
-                console.log(e)
-            })
+            }
+            setIsLoading(false)
+        }
+        searchData()
     }, [keyword])
-    
+
 
     const searching = keyword => {
         setkeyword(keyword)
     }
-    console.log(searchBooks)
+    console.log(data)
     return (
         <div>
-            <h2>책 검색하기</h2>
+            <h2>책 rt</h2>
             <SearchBookInput searching={searching}/>
             {/* {
-                isLoading && searchBooks.length === 0 && (<h1>No Data Fount</h1>) 
+                isLoading && searchBooks.length === 0 && (<h1>No Data Found</h1>) 
             } */}
             {
-                searchBooks && !isLoading && <SearchBookCont searchBooks={searchBooks}/>
+                data && !isLoading && <SearchBookCont data={data}/>
             }
             {
                 error ? error : null 
@@ -73,3 +55,23 @@ const SearchBookMain = () => {
 };
 
 export default SearchBookMain;
+
+    // useEffect(() => {
+    //     axios.get(searchApi)
+    //         .then(res => {
+    //             setSearchBooks(res.data.item)
+    //             setIsLoading(false)
+    //             setError('')
+    //         })
+    //         .then(response => {
+    //             var xml = new XMLParser().parseFromString(response)
+    //             console.log(xml)
+    //         })
+    //         .catch ( e => {
+    //             setSearchBooks([])
+    //             setIsLoading(false)
+    //             setError('Something went wrong')
+    //             console.log(e)
+    //         })
+    // }, [keyword])
+    
