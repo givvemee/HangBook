@@ -6,7 +6,8 @@ const Main = () => {
     const [recommend, setRecommend] = useState([]);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const bestSellersApi = 'https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=ttb201403672030001&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101'
+    const apiKey = 'ttb201403672030001'
+    const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101`
 
     useEffect(() => {
         const getData = async () => {
