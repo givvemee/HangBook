@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HangBook/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/HangBook/static/js/main.252e2e5f.chunk.js",
-    "main.js.map": "/HangBook/static/js/main.252e2e5f.chunk.js.map",
+    "main.js": "/HangBook/static/js/main.45699429.chunk.js",
+    "main.js.map": "/HangBook/static/js/main.45699429.chunk.js.map",
     "runtime-main.js": "/HangBook/static/js/runtime-main.5c09e801.js",
     "runtime-main.js.map": "/HangBook/static/js/runtime-main.5c09e801.js.map",
     "static/js/2.da7f8397.chunk.js": "/HangBook/static/js/2.da7f8397.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5c09e801.js",
     "static/js/2.da7f8397.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.252e2e5f.chunk.js"
+    "static/js/main.45699429.chunk.js"
   ]
 }
