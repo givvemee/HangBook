@@ -17,13 +17,16 @@ const SearchBookMain = () => {
         const searchData = async () => {
             try {
                 const res = await axios.get(searchApi)
-                // console.log(JSON.stringify(res.data.item))
-                console.log(res.data)
-
-                console.log(res.data)
+                // 끝에 세미콜론이 들어감! 
+                console.log(res.data.substring(0, res.data.length - 1));
+                console.log(JSON.parse(res.data.substring(0, res.data.length - 1)))
+                const parsed = JSON.parse(res.data.substring(0, res.data.length - 1));
+                console.log(parsed)
+                
                 setIsLoading(true)
                 setError(null)
-                setData(res.data.item)
+                // setData(res.data.item)
+                setData(parsed.item)
             } catch (e) {
                 setError('Something went wrong')
             }
@@ -41,9 +44,9 @@ const SearchBookMain = () => {
         <div>
             <h2>책 rt</h2>
             <SearchBookInput searching={searching}/>
-            {/* {
-                isLoading && searchBooks.length === 0 && (<h1>No Data Found</h1>) 
-            } */}
+            {
+                isLoading && setData.length === 0 && (<h1>No Data Found</h1>) 
+            }
             {
                 data && !isLoading && <SearchBookCont data={data}/>
             }
