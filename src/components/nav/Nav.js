@@ -1,7 +1,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
+const NavCont = styled.nav`
+    width: 20vw;
+    background: #ccc;
+`
 const navList = [
     {id: 1, tap: 'Main', path: '/'},
     {id: 2, tap: 'Best Sellers', path: '/bestSellers'},
@@ -11,7 +16,7 @@ const navList = [
 const Nav = () => {
     return (
         <>
-            <nav style={{background: 'orange'}}>
+            <nav>
                 <ul>
                     {
                         navList.map((item, index) => <li key={index}><Link to={item.path}>{item.tap}</Link></li>)

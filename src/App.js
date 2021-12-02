@@ -7,7 +7,13 @@ import Nav from './components/nav/Nav';
 import Today from './components/main/Today(test)/Today'
 import SearchBookMain from './components/main/searchBooks/SearchBookMain';
 // import SearchBookMain from './components/main/searchBooks/SearchBookMain';
+import './components/style/reset.css'
+import styled from 'styled-components';
 
+const FullWrap = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+`
 const App = () => {
   return (
     // <>
@@ -22,13 +28,17 @@ const App = () => {
     <>
     <Header />
     <Router>
-      <Nav />
-      <Switch>
-        <Route path="/" component={Main} exact={true} />
-        <Route path="/bestSellers" component={BestSellerMain} />
-        <Route path="/searchBooks" component={SearchBookMain} />
-        <Route path="/todays" component={Today} />
-      </Switch>
+      <FullWrap>
+        <Nav />
+        <div>  
+          <Switch>
+            <Route path="/" component={Main} exact={true} />
+            <Route path="/bestSellers" component={BestSellerMain} />
+            <Route path="/searchBooks" component={SearchBookMain} />
+            <Route path="/todays" component={Today} />
+          </Switch>
+        </div>
+      </FullWrap>
     </Router>
   </>
   );

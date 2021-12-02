@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BestSellersList from './BestSellersList';
+import styled from 'styled-components';
 
+const BestCont = styled.section`
+    width: 80vw;
+    float: left;
+`
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState([]);
     const [loading, setLoading] = useState(true)
