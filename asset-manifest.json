@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/HangBook/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/HangBook/static/js/main.b95d03af.chunk.js",
-    "main.js.map": "/HangBook/static/js/main.b95d03af.chunk.js.map",
-    "runtime-main.js": "/HangBook/static/js/runtime-main.35ea6bf9.js",
-    "runtime-main.js.map": "/HangBook/static/js/runtime-main.35ea6bf9.js.map",
-    "static/js/2.4d50cd78.chunk.js": "/HangBook/static/js/2.4d50cd78.chunk.js",
-    "static/js/2.4d50cd78.chunk.js.map": "/HangBook/static/js/2.4d50cd78.chunk.js.map",
-    "static/js/3.4495cd0b.chunk.js": "/HangBook/static/js/3.4495cd0b.chunk.js",
-    "static/js/3.4495cd0b.chunk.js.map": "/HangBook/static/js/3.4495cd0b.chunk.js.map",
+    "main.js": "/HangBook/static/js/main.fbadd41f.chunk.js",
+    "main.js.map": "/HangBook/static/js/main.fbadd41f.chunk.js.map",
+    "runtime-main.js": "/HangBook/static/js/runtime-main.5834ed0f.js",
+    "runtime-main.js.map": "/HangBook/static/js/runtime-main.5834ed0f.js.map",
+    "static/js/2.2635a745.chunk.js": "/HangBook/static/js/2.2635a745.chunk.js",
+    "static/js/2.2635a745.chunk.js.map": "/HangBook/static/js/2.2635a745.chunk.js.map",
+    "static/js/3.1deda184.chunk.js": "/HangBook/static/js/3.1deda184.chunk.js",
+    "static/js/3.1deda184.chunk.js.map": "/HangBook/static/js/3.1deda184.chunk.js.map",
     "index.html": "/HangBook/index.html",
     "static/css/main.6dea0f05.chunk.css.map": "/HangBook/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.4d50cd78.chunk.js.LICENSE.txt": "/HangBook/static/js/2.4d50cd78.chunk.js.LICENSE.txt"
+    "static/js/2.2635a745.chunk.js.LICENSE.txt": "/HangBook/static/js/2.2635a745.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.35ea6bf9.js",
-    "static/js/2.4d50cd78.chunk.js",
+    "static/js/runtime-main.5834ed0f.js",
+    "static/js/2.2635a745.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b95d03af.chunk.js"
+    "static/js/main.fbadd41f.chunk.js"
   ]
 }
