@@ -35,3 +35,9 @@
  ┣ 📜logo.svg
  ┣ 📜reportWebVitals.js
  ┗ 📜setupTests.js
+
+#### 
+Components 
+- Today (is for main)
+- Searching Books
+- Showing Best sellers
