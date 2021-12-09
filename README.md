@@ -6,7 +6,7 @@
 - **기간** 21. 11. 24 ~ 
 - **사용 기술** React | Styled-Component | Javascript 
 
-#### 📌 Trees (정ㄹ 필요)
+#### 📌 Trees (정리 필요)
 📦src
  ┣ 📂components
  ┃ ┣ 📂header

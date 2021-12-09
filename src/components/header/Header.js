@@ -4,9 +4,11 @@ import Nav from '../nav/Nav';
 
 const Head = styled.header`
     padding: 10px 5px;
+    height: 50px;
     background: white;
     display: flex;
     justify-content: space-between;
+    font-family: 'NotoSans';
 `
 const HeaderTitle = styled.h1`
     display: inline-block;
@@ -20,7 +22,6 @@ const HeaderTitle = styled.h1`
 `
 const Menu = styled.nav`
     width: 40%;
-    background-color: pink;
 `
 const Header = () => {
     return (

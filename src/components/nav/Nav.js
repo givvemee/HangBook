@@ -20,6 +20,14 @@ const MenuListWrap = styled.ul`
 const MenuList = styled.li`
     float: left;
     margin: 0 10px;
+    a {
+        color: #2e2e2e;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 50px;
+    }
+    
 `
 const Nav = () => {
     return (
