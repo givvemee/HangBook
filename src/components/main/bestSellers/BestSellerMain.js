@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BestSellersList from './BestSellersList';
 import styled from 'styled-components';
+import Title from '../../common/Title';
 
 const BestCont = styled.section`
     width: 80vw;
@@ -29,17 +30,22 @@ const BestSellerMain = () => {
         }
         getData()
     }, [])
-    if (loading) {
-        return <div>Now Loading...</div>
-    }
-    if (error) {
-        return <div>Something went wrong</div>
-    }
+    // if (loading) {
+    //     return <div>Now Loading...</div>
+    // }
+    // if (error) {
+    //     return <div>Something went wrong</div>
+    // }
     return (
         <div>
             <h2>Best Sellers</h2>
             {
-                bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items}/>)
+                loading ? <div>Now Loading...</div> : 
+                <>
+                {
+                    bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items}/>)
+                }
+                </>
             }
         </div>
     );

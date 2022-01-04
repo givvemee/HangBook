@@ -9,26 +9,45 @@ import SearchBookMain from './components/main/searchBooks/SearchBookMain';
 import '../src/components/common/reset.css'
 import styled from 'styled-components';
 
+const MainBack = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: #e6e9f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 const FullWrap = styled.div`
-  font-family: 'NotoSans';
+  width: 70%;
+  height: 80vh;
+  padding: 90px 50px;
+  font-family: 'Montserrat';
+  background-color: #fff;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: .3fr .7fr;
+  overflow: hidden;
+  
 `
 const App = () => {
   return (
     <>
-      <Router>
-        <Header />
-        <FullWrap>
-          {/* <Nav /> */}
-          <div>  
-            <Switch>
-              <Route path="/" component={Main} exact={true} />
-              <Route path="/bestSellers" component={BestSellerMain} />
-              <Route path="/searchBooks" component={SearchBookMain} />
-              <Route path="/todays" component={Today} />
-            </Switch>
-          </div>
-        </FullWrap>
-      </Router>
+      <MainBack>
+        <Router>
+          <FullWrap>
+            <Header />
+              {/* <Nav /> */}
+            <div>  
+              <Switch>
+                <Route path="/" component={Main} exact={true} />
+                <Route path="/bestSellers" component={BestSellerMain} />
+                <Route path="/searchBooks" component={SearchBookMain} />
+                <Route path="/todays" component={Today} />
+              </Switch>
+            </div>
+          </FullWrap>
+        </Router>
+      </MainBack>
   </>
   );
 };
