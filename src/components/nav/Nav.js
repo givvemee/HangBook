@@ -14,12 +14,15 @@ const navList = [
 
 const NavCont = styled.nav`
     width: 100%;
-    border: 1px solid blue;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
 `
 const MenuListWrap = styled.ul`
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    /* margin: 25px 0;
+    padding: 25px 0; */
 `
 const MenuList = styled.li`
     /* float: left; */
@@ -29,10 +32,15 @@ const MenuList = styled.li`
         color: #2e2e2e;
         text-decoration: none;
         font-weight: bold;
-        font-size: 20px;
-        line-height: 50px;
+        font-size: 18px;
+        line-height: 80px;
         display: flex;
         justify-content: space-between;
+        border-bottom: #a5a5a5;
+        & > svg {
+            font-weight: bold;
+            height: 80px;
+        }
     }
     
 `

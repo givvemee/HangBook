@@ -8,8 +8,7 @@ const HeadWrap = styled.div`
     width: 80%;
     height: calc(100%- 200px);
     margin: 0 auto;
-    background: #f4f4f6;
-    border: 1px solid green;
+    position: relative;
 `
 const Head = styled.header`
     width: 100%;
@@ -17,7 +16,6 @@ const Head = styled.header`
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat';
-    border: 1px solid red;
 
 `
 const HeaderTitle = styled.h1`

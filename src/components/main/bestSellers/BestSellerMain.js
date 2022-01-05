@@ -1,12 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import BestSellersList from './BestSellersList';
 import styled from 'styled-components';
 import Title from '../../common/Title';
 
-const BestCont = styled.section`
-    width: 80vw;
-    float: left;
+
+const BestSellerWrap = styled.div`
+    width: 95%;
+    margin: 0 auto;
+    height: inherit;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
 `
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState([]);
@@ -15,12 +21,13 @@ const BestSellerMain = () => {
     const apiKey = 'ttb201403672030001'
     const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101`
 
+    
     useEffect(() => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
                 setLoading(true)
-                console.log(res.data.item)
+                // console.log(res.data.item)
                 setError(null)
                 setBestSellers(res.data.item)
             } catch (e) {
@@ -30,22 +37,19 @@ const BestSellerMain = () => {
         }
         getData()
     }, [])
-    // if (loading) {
-    //     return <div>Now Loading...</div>
-    // }
-    // if (error) {
-    //     return <div>Something went wrong</div>
-    // }
+
+    
     return (
         <div>
-            <h2>Best Sellers</h2>
+            <Title titleText="Best Seller"></Title>
+     
             {
                 loading ? <div>Now Loading...</div> : 
-                <>
+                <BestSellerWrap>
                 {
                     bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items}/>)
                 }
-                </>
+                </BestSellerWrap>
             }
         </div>
     );

@@ -1,13 +1,18 @@
+
 import styled from "styled-components";
 
 const HeadTitle = styled.h2`
-    font-size: 20px;
-
+    width: 95%;
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
 `
-const Title = () => {
+const Title = ({titleText}) => {
+
     return (
-        <HeadTitle />
-    );
-};
+        <HeadTitle>{titleText}</HeadTitle>
+    )
+}
 
 export default Title;

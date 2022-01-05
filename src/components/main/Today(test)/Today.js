@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import TodayItem from './TodayItem';
+import Title from '../../common/Title';
 
 const Main = () => {
     const [recommend, setRecommend] = useState([]);
@@ -26,19 +27,21 @@ const Main = () => {
     }, [])
     console.log(recommend)
 
-    if (loading) {
-        return <div>Now Loading...</div>
-    }
-    if (error) {
-        return <div>Something went wrong</div>
-    }
+    // if (loading) {
+    //     return <div>Now Loading...</div>
+    // }
+    // if (error) {
+    //     return <div>Something went wrong</div>
+    // }
     return (
-        <div>
-            <h2>Tdy</h2>
-            {
-                recommend && <TodayItem recommend={recommend}/>
-            }
-        </div>
+        <>
+            <Title titleText="Today's Recommend for you"/>
+            <div>
+                {
+                    recommend && <TodayItem recommend={recommend}/>
+                }
+            </div>
+        </>
     );
 };
 

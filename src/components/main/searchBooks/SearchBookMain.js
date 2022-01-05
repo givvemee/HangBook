@@ -42,11 +42,14 @@ const SearchBookMain = () => {
     console.log(data)
     return (
         <div>
-            <Title>Heydddd</Title>
+            <Title titleText="Search Books"/>
             <SearchBookInput searching={searching}/>
             {
                 isLoading && setData.length === 0 && (<h1>No Data Found</h1>) 
             }
+            {/* {
+                isLoading && setData.length === 0 && (<h1>No Data Found</h1>) 
+            } */}
             {
                 data && !isLoading && <SearchBookCont data={data}/>
             }
