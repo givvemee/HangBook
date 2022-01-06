@@ -8,11 +8,16 @@ import Title from '../../common/Title';
 const BestSellerWrap = styled.div`
     width: 95%;
     margin: 0 auto;
-    height: inherit;
-    border: 1px solid red;
+    height: 510px;
+    /* border: 1px solid pink; */
     display: flex;
     flex-wrap: wrap;
-    overflow-x: auto;
+    /* overflow-x: hidden; */
+    position: relative;
+`
+const BestSellerView = styled.div`
+    /* border: 1px solid red; */
+    overflow-x: hidden;
 `
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState([]);
@@ -42,15 +47,19 @@ const BestSellerMain = () => {
     return (
         <div>
             <Title titleText="Best Seller"></Title>
-     
-            {
-                loading ? <div>Now Loading...</div> : 
-                <BestSellerWrap>
+            <BestSellerView>
                 {
-                    bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items}/>)
+                    loading ? 
+                    <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        <p>Now Loading...</p> 
+                    </div> : 
+                    <BestSellerWrap>
+                    {
+                        bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items} />)
+                    }
+                    </BestSellerWrap>
                 }
-                </BestSellerWrap>
-            }
+            </BestSellerView>
         </div>
     );
 };

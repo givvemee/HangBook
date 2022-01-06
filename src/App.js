@@ -18,18 +18,18 @@ const MainBack = styled.div`
   align-items: center;
 `
 const FullWrap = styled.div`
-  width: 70%;
+  width: 70vw;
   height: 80vh;
   padding: 90px 50px;
   font-family: 'Montserrat';
   border-radius: 20px;
   display: grid;
   grid-template-columns: .3fr .7fr;
-  overflow: hidden;
+  /* overflow: hidden; */
   background: #f4f4f6;
   & > div {
-    /* border: 1px solid red; */
-    overflow-x: auto;
+    /* border: 1px solid green; */
+    overflow-x: hidden;
   }
 `
 const App = () => {
