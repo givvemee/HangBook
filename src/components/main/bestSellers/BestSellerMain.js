@@ -3,6 +3,7 @@ import axios from 'axios';
 import BestSellersList from './BestSellersList';
 import styled from 'styled-components';
 import Title from '../../common/Title';
+import Loading from '../../common/Loading';
 
 
 const BestSellerWrap = styled.div`
@@ -24,8 +25,8 @@ const BestSellerMain = () => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const apiKey = 'ttb201403672030001'
-    // const bestSellersApi = `ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101/Cover=Big`
-    const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
+    const bestSellersApi = `ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
+    // const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
     
     useEffect(() => {
         const getData = async () => {
@@ -50,9 +51,9 @@ const BestSellerMain = () => {
             <BestSellerView>
                 {
                     loading ? 
-                    <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                        <p>Now Loading...</p> 
-                    </div> : 
+                    <>
+                        <Loading loadingTxt="Now Loading..." />
+                    </> : 
                     <BestSellerWrap>
                     {
                         bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items} />)

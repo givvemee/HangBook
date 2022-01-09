@@ -2,13 +2,20 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import TodayItem from './TodayItem';
 import Title from '../../common/Title';
+import styled from 'styled-components';
+import Loading from '../../common/Loading';
 
+const TodaysSubTitle = styled.p`
+    width: 95%;
+    margin: 0 auto;
+`
 const Main = () => {
     const [recommend, setRecommend] = useState([]);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const apiKey = 'ttb201403672030001'
-    const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101`
+    const bestSellersApi = `ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
+    // const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101`
 
     useEffect(() => {
         const getData = async () => {
@@ -36,9 +43,15 @@ const Main = () => {
     return (
         <>
             <Title titleText="Today's Recommend for you"/>
+            <TodaysSubTitle>HangBook will recommend a book only for you.</TodaysSubTitle>
             <div>
+
                 {
-                    recommend && <TodayItem recommend={recommend}/>
+                    loading ? 
+                    <>
+                        <Loading loadingTxt="Now Loading..." />
+                    </>  : 
+                    <TodayItem recommend={recommend}/>
                 }
             </div>
         </>

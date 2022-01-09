@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../common/Loading';
 import Title from '../../common/Title';
 import SearchBookCont from './SearchBookCont';
 import SearchBookInput from './SearchBookInput';
@@ -11,7 +12,8 @@ const SearchBookMain = () => {
     const [keyword, setkeyword] = useState('리액트')
     
     const apiKey = 'ttb201403672030001'
-    const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
+    // const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
+    const searchApi = `ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
    
     useEffect(() => {
         const searchData = async () => {
@@ -45,11 +47,11 @@ const SearchBookMain = () => {
             <Title titleText="Search Books"/>
             <SearchBookInput searching={searching}/>
             {
-                isLoading && setData.length === 0 && (<h1>No Data Found</h1>) 
+                isLoading &&
+                <>
+                    <Loading loadingTxt="Now Loading..." />
+                </>
             }
-            {/* {
-                isLoading && setData.length === 0 && (<h1>No Data Found</h1>) 
-            } */}
             {
                 data && !isLoading && <SearchBookCont data={data}/>
             }

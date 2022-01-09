@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 // import { FaLongArrowAltRight } from 'react-icons/fa';
@@ -29,7 +29,7 @@ const MenuList = styled.li`
     /* margin: 0 10px; */
     height: 80px;
     a {
-        color: #2e2e2e;
+        color: #aaa;
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
@@ -40,6 +40,9 @@ const MenuList = styled.li`
         & > svg {
             font-weight: bold;
             height: 80px;
+        }
+        &:focus {
+            color: #2e2e2e;
         }
     }
     
@@ -52,7 +55,7 @@ const Nav = () => {
                     {
                         navList.map((item, index) => 
                             <MenuList key={index}>
-                                <Link to={item.path}>
+                                <Link to={item.path} >
                                     <p>{item.tap}</p>
                                     <IoIosArrowForward/>
                                 </Link>
