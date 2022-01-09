@@ -1,8 +1,36 @@
 import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
+import { IoSearchSharp } from "react-icons/io5";
+
+const SearchForm = styled.form`
+    width: auto;
+    position: relative;
+    margin: 0px 20px 30px;
+`
+const SearchInput = styled.input`
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 45px;
+    font-family: 'Montserrat';
+    box-shadow:2px 4px 16px 3px rgba(191,191,191,0.78);
+    outline: none;
+    border: none;
+    &::placeholder {
+        font-family: 'Montserrat';
+    }
+`
+const SearchIcon = styled.div`
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    font-size: 20px;
+`
 
 const SearchBookInput = ({searching}) => {
     const textRef = useRef()
-    const [ text , setText ] = useState('')
+    const [ text , setText ] = useState('react')
 
     const onSubmit = (e) => {
         e.preventDefault() 
@@ -14,10 +42,13 @@ const SearchBookInput = ({searching}) => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
-            <input type="text" placeholder="책 제목을 입력하세요." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
-            <button type="submit">찾기</button>
-        </form>
+        <SearchForm onSubmit={onSubmit}>
+            <SearchInput type="text" placeholder="Find the book." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
+            {/* <button type="submit">찾기</button> */}
+            <SearchIcon>
+                <IoSearchSharp/>
+            </SearchIcon>
+        </SearchForm>
     );
 };
 
