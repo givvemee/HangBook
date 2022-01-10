@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/HangBook/static/css/main.65507273.chunk.css",
-    "main.js": "/HangBook/static/js/main.c2cc12ab.chunk.js",
-    "main.js.map": "/HangBook/static/js/main.c2cc12ab.chunk.js.map",
-    "runtime-main.js": "/HangBook/static/js/runtime-main.4c3b92e9.js",
-    "runtime-main.js.map": "/HangBook/static/js/runtime-main.4c3b92e9.js.map",
-    "static/js/2.ea1ff079.chunk.js": "/HangBook/static/js/2.ea1ff079.chunk.js",
-    "static/js/2.ea1ff079.chunk.js.map": "/HangBook/static/js/2.ea1ff079.chunk.js.map",
-    "static/js/3.9bab5a51.chunk.js": "/HangBook/static/js/3.9bab5a51.chunk.js",
-    "static/js/3.9bab5a51.chunk.js.map": "/HangBook/static/js/3.9bab5a51.chunk.js.map",
+    "main.js": "/HangBook/static/js/main.aa57fbad.chunk.js",
+    "main.js.map": "/HangBook/static/js/main.aa57fbad.chunk.js.map",
+    "runtime-main.js": "/HangBook/static/js/runtime-main.10304528.js",
+    "runtime-main.js.map": "/HangBook/static/js/runtime-main.10304528.js.map",
+    "static/js/2.aa4d31e0.chunk.js": "/HangBook/static/js/2.aa4d31e0.chunk.js",
+    "static/js/2.aa4d31e0.chunk.js.map": "/HangBook/static/js/2.aa4d31e0.chunk.js.map",
+    "static/js/3.31087c37.chunk.js": "/HangBook/static/js/3.31087c37.chunk.js",
+    "static/js/3.31087c37.chunk.js.map": "/HangBook/static/js/3.31087c37.chunk.js.map",
     "index.html": "/HangBook/index.html",
     "static/css/main.65507273.chunk.css.map": "/HangBook/static/css/main.65507273.chunk.css.map",
-    "static/js/2.ea1ff079.chunk.js.LICENSE.txt": "/HangBook/static/js/2.ea1ff079.chunk.js.LICENSE.txt",
+    "static/js/2.aa4d31e0.chunk.js.LICENSE.txt": "/HangBook/static/js/2.aa4d31e0.chunk.js.LICENSE.txt",
     "static/media/font.css": "/HangBook/static/media/Montserrat-Medium.e2d60bc4.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.4c3b92e9.js",
-    "static/js/2.ea1ff079.chunk.js",
+    "static/js/runtime-main.10304528.js",
+    "static/js/2.aa4d31e0.chunk.js",
     "static/css/main.65507273.chunk.css",
-    "static/js/main.c2cc12ab.chunk.js"
+    "static/js/main.aa57fbad.chunk.js"
   ]
 }

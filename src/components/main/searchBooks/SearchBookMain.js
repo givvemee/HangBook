@@ -4,6 +4,7 @@ import Loading from '../../common/Loading';
 import Title from '../../common/Title';
 import SearchBookCont from './SearchBookCont';
 import SearchBookInput from './SearchBookInput';
+import SearchBookSubLeft from './SearchBookSubLeft';
 
 const SearchBookMain = () => {
     const [data , setData] = useState([])
@@ -12,7 +13,7 @@ const SearchBookMain = () => {
     const [keyword, setkeyword] = useState('리액트')
     
     const apiKey = 'ttb201403672030001'
-    const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
+    const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901&Cover=Big`
     // const searchApi = `ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
    
     useEffect(() => {
@@ -49,8 +50,8 @@ const SearchBookMain = () => {
             {
                 isLoading &&
                 <>
-                        <Loading loadingTxt="Now Loading..." />
-                    </>
+                    <Loading loadingTxt="Now Loading..." />
+                </>
             }
             {
                 data && !isLoading && <SearchBookCont data={data}/>

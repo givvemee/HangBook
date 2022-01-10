@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { IoSearchSharp } from "react-icons/io5";
 
 const SearchForm = styled.form`
-    width: auto;
+    width: 400px;
     position: relative;
-    margin: 0px 20px 30px;
+    margin: 20px auto;
 `
 const SearchInput = styled.input`
     width: 400px;
@@ -21,6 +21,8 @@ const SearchInput = styled.input`
     }
 `
 const SearchIcon = styled.div`
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
