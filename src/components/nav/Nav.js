@@ -10,6 +10,7 @@ const navList = [
     {id: 2, tap: 'Best Sellers', path: '/bestSellers'},
     {id: 3, tap: 'Search Books', path: '/searchBooks'},
     {id: 4, tap: "Today's Book", path: '/todays'}
+  
 ]
 
 const NavCont = styled.nav`
@@ -21,12 +22,8 @@ const NavCont = styled.nav`
 const MenuListWrap = styled.ul`
     display: flex;
     flex-direction: column;
-    /* margin: 25px 0;
-    padding: 25px 0; */
 `
 const MenuList = styled.li`
-    /* float: left; */
-    /* margin: 0 10px; */
     height: 80px;
     a {
         color: #aaa;
@@ -42,7 +39,7 @@ const MenuList = styled.li`
             height: 80px;
         }
         &:focus {
-            color: #2e2e2e;
+            color: ${props => props.theme.txtFocus};
         }
     }
     

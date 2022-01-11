@@ -7,6 +7,7 @@ const HeadTitle = styled.h2`
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: ${props => props.theme.textColor};
 `
 const Title = ({titleText}) => {
 

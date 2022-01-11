@@ -34,6 +34,7 @@ const QuoteRefresh = styled.button`
     background: none;
     border: 0;
     cursor: pointer;
+    color: ${props => props.theme.textColor};
 `
 
 const ShowQuotes = () => {

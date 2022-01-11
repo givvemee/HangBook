@@ -4,11 +4,12 @@ import styled from 'styled-components';
 const TodaysWrap = styled.div`
     width: 95%;
     margin: 0 auto;
-    height: 510px;
+    height: 560px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding-top: 30px;
+    padding-top: 60px;
+    color: ${props => props.theme.textColor};
 `
 const TodaysLeft = styled.div`
     width: 30%;

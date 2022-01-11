@@ -24,6 +24,7 @@ const HeaderTitle = styled.h1`
     text-align: center;
     padding: 0px;
     height: auto;
+    color: ${props => props.theme.textColor};
     span {
         font-style: italic;
         font-size: 24px;

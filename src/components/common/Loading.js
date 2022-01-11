@@ -13,6 +13,7 @@ const LoadingTitle = styled.h3`
     font-weight: bold;
     font-size: 24px;
     font-style: italic;
+    color: ${props => props.theme.textColor};
 `
 const Loading = ({loadingTxt}) => {
     return (

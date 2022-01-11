@@ -9,8 +9,8 @@ import Loading from '../../common/Loading';
 const BestSellerWrap = styled.div`
     width: 95%;
     margin: 0 auto;
-    height: 510px;
-    /* border: 1px solid pink; */
+    padding-top: 20px;
+    height: 560px;
     display: flex;
     flex-wrap: wrap;
     /* overflow-x: hidden; */

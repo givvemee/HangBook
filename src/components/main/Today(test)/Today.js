@@ -8,6 +8,7 @@ import Loading from '../../common/Loading';
 const TodaysSubTitle = styled.p`
     width: 95%;
     margin: 0 auto;
+    color: ${props => props.theme.textColor};
 `
 const Main = () => {
     const [recommend, setRecommend] = useState([]);

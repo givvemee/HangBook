@@ -9,7 +9,7 @@ const LeftImg = styled.img`
 `
 const LeftTitle = styled.p`
     font-size: 18px;
-    margin: 10px 0;
+    margin: 30px 0 20px;
     font-weight: bold;
     font-style: italic;
 `
@@ -19,7 +19,7 @@ const LeftBookTitle = styled.p`
 `
 const LeftInfo = styled.p`
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 12px;
 `
 const LeftDesc = styled.p`
     width: 80%;
@@ -43,14 +43,16 @@ const SearchBookSubLeft = ({books}) => {
                         {author}
                     </LeftInfo>
                 </li>
-                <li>
+                {/* <li>
                     <LeftInfo>
                         {publisher}
                     </LeftInfo>
-                </li>
+                </li> */}
                 <li>
                     <LeftDesc>
-                        {description}
+                        {
+                            description.length < 100 ? description : description.substr(0, 100) + "..."
+                        }
                     </LeftDesc>
                 </li>
             </ul>
@@ -59,3 +61,5 @@ const SearchBookSubLeft = ({books}) => {
 };
 
 export default SearchBookSubLeft;
+
+

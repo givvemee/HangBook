@@ -20,6 +20,7 @@ const SearchBookRight = styled.div`
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    padding: 10px;
 `
 const SearchBookCont = ({data}) => {
     return (

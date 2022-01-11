@@ -13,7 +13,7 @@ const SearchBookMain = () => {
     const [keyword, setkeyword] = useState('리액트')
     
     const apiKey = 'ttb201403672030001'
-    const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901&Cover=Big`
+    const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=서울&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901&Cover=Big`
     // const searchApi = `ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901`
    
     useEffect(() => {
@@ -21,6 +21,7 @@ const SearchBookMain = () => {
             try {
                 const res = await axios.get(searchApi);
                 // 끝에 세미콜론이 들어감! 
+                console.log(typeof res);
                 console.log(res.data.substring(0, res.data.length - 1));
                 console.log(JSON.parse(res.data.substring(0, res.data.length - 1)))
                 const parsed = JSON.parse(res.data.substring(0, res.data.length - 1));
@@ -32,6 +33,7 @@ const SearchBookMain = () => {
                 setData(parsed.item)
             } catch (e) {
                 setError('Something went wrong')
+                console.log(e)
             }
             setIsLoading(false)
         }
