@@ -12,12 +12,12 @@ const BestItems = styled.div`
     height: 170px;
     /* padding: 20px; */
     margin: 10px auto;
-    background: #f0edf3;
+    background: ${props => props.theme.itemBg};
     border-radius: 20px;
     position: relative;
     &:hover {
         cursor: pointer;
-        background: #fcedf6;
+        background: #eee;
     }
 `
 const BestRank = styled.p`

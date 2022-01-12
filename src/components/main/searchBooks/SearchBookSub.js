@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SearchBookItems = styled.div`
-    width: 45%;
+    width: 44%;
     text-align: center;
     margin: 10px;
     padding: 10px;
@@ -20,7 +20,7 @@ const ItemAuthor = styled.p`
     font-size: 12px;
 `
 const SearchBookSub = ({books}) => {
-    const {title, author, cover, description, publisher} = books
+    const {title, author} = books
     return (
         <SearchBookItems>
             <ItemImg src={books.cover} alt={title}/>

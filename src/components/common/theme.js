@@ -5,6 +5,7 @@ export const lightMode = {
     textColor: "#333333",
     txtFocus: "#223d7f",
     rightBg: "#f4f4f6",
+    itemBg: "#f5f0f7",
 }
 
 export const darkMode = {
@@ -12,6 +13,6 @@ export const darkMode = {
     textColor: "#e6e9f1",
     txtFocus: "#227f2b",
     rightBg: "#19160e",
-    
+    itemBg: "#ebf2ee",
     
 }

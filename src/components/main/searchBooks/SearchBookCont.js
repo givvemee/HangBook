@@ -7,6 +7,7 @@ const SearchBookWrap = styled.div`
     width: 100%;
     height: 450px;
     display: flex;
+    color: ${props => props.theme.textColor};
 `
 const SearchBookLeft = styled.div`
     width: 45%;
