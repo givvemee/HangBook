@@ -1,9 +1,7 @@
-import React, { createContext, useCallback, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import BestSellerMain from './components/main/bestSellers/BestSellerMain';
-import Main from './components/main/Main';
-import Nav from './components/nav/Nav';
 import Today from './components/main/Today(test)/Today'
 import SearchBookMain from './components/main/searchBooks/SearchBookMain';
 import '../src/components/common/reset.css'
@@ -57,13 +55,11 @@ const App = () => {
           <HashRouter>
             <FullWrap>
               <Header />
-                {/* <Nav /> */}
               <div>  
                 <Switch>
-                  {/* <Route path="/" component={Main} exact /> */}
-                  <Route path="/" component={BestSellerMain} exact />
+                  <Route path="/" component={Today} exact />
+                  <Route path="/bestSellers" component={BestSellerMain} />
                   <Route path="/searchBooks" component={SearchBookMain} />
-                  <Route path="/todays" component={Today} />
                 </Switch>
               </div>
             </FullWrap>

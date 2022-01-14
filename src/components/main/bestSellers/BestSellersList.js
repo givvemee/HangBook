@@ -5,7 +5,6 @@ import { FaRegWindowClose } from "react-icons/fa";
 const BestItemsWrap = styled.div`
     width: 20%;
     height: 260px;
-    /* border: 1px solid blue; */
 `
 const BestItems = styled.div`
     width: 130px;
@@ -148,12 +147,6 @@ const BestSellersList = ({items}) => {
             <BestItems onClick={clickToShow}>
                 <BestRank>{bestRank}</BestRank>
                 <BestItemImg src={cover} alt={title}/>
-                {/* <ul>
-                    <li>{title}</li>
-                    <li>{author}</li>
-                    <li>{publisher}</li>
-                    <li>{description}</li>
-                </ul> */}
             </BestItems>
             <BestItemTitle>
                 {

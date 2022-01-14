@@ -26,8 +26,7 @@ const LeftDesc = styled.p`
     margin: 10px auto;
 `
 const SearchBookSubLeft = ({books}) => {
-    const {title, author, cover, description, publisher} = books;
-    console.log(books);
+    const {title, author, cover, description} = books;
     return (
         <>
             <LeftTitle>Most Relavant Result</LeftTitle>
@@ -43,15 +42,10 @@ const SearchBookSubLeft = ({books}) => {
                         {author}
                     </LeftInfo>
                 </li>
-                {/* <li>
-                    <LeftInfo>
-                        {publisher}
-                    </LeftInfo>
-                </li> */}
                 <li>
                     <LeftDesc>
                         {
-                            description.length < 100 ? description : description.substr(0, 100) + "..."
+                            description.length < 100 ? description : description.substr(0, 70) + "..."
                         }
                     </LeftDesc>
                 </li>

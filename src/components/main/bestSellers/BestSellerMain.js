@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BestSellersList from './BestSellersList';
 import styled from 'styled-components';
@@ -25,7 +25,6 @@ const BestSellerMain = () => {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
     const apiKey = 'ttb201403672030001'
-    // const bestSellersApi = `ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
     const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
     
     useEffect(() => {
@@ -33,7 +32,6 @@ const BestSellerMain = () => {
             try {
                 const res = await axios.get(bestSellersApi)
                 setLoading(true)
-                // console.log(res.data.item)
                 setError(null)
                 setBestSellers(res.data.item)
             } catch (e) {

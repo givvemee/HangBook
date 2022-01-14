@@ -14,6 +14,7 @@ const SearchBookLeft = styled.div`
     height: 450px;
     margin: 0 auto;
     text-align: center;
+    cursor: pointer;
 `
 const SearchBookRight = styled.div`
     width: 53%;
@@ -36,7 +37,7 @@ const SearchBookCont = ({data}) => {
             <SearchBookRight>
                 {
                     data.slice(1,5).map(books => 
-                    <SearchBookSub key={books.isbn13} books={books}/>)
+                    <SearchBookSub key={books.isbn} books={books}/>)
                 }
             </SearchBookRight>
 

@@ -1,19 +1,13 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-// import { FaLongArrowAltRight } from 'react-icons/fa';
 import { IoIosArrowForward } from "react-icons/io";
 
 const navList = [
-    // {id: 1, tap: 'Main', path: '/'},
-    {id: 1, tap: 'Best Sellers', path: '/'},
-    {id: 2, tap: 'Search Books', path: '/searchBooks'},
-    {id: 3, tap: "Today's Book", path: '/todays'},
-    // {id: 1, tap: 'Menu1', path: '/'},
-    // {id: 2, tap: 'Menu2', path: '/bestSellers'},
-    // {id: 3, tap: 'Menu3', path: '/searchBooks'},
-    // {id: 4, tap: "Menu4", path: '/todays'}
+    {id: 1, tap: "Today's Book", path: '/'},
+    {id: 2, tap: 'Best Sellers', path: '/bestSellers'},
+    {id: 3, tap: 'Search Books', path: '/searchBooks'},
 ]
 
 const NavCont = styled.nav`
@@ -32,8 +26,6 @@ const MenuList = styled.li`
     a {
         color: #aaa;
         text-decoration: none;
-        /* font-weight: bold; */
-        font-size: 18px;
         line-height: 80px;
         display: flex;
         justify-content: space-between;
@@ -43,7 +35,6 @@ const MenuList = styled.li`
             height: 80px;
         }
         &:focus {
-            /* color: ${props => props.theme.txtFocus}; */
             font-weight: 900;
         }
     }
@@ -62,8 +53,9 @@ const Nav = () => {
                             <MenuList key={index}>
                                 <Link to={item.path}
                                     style={{
-                                        color: `${location.pathname === item.path ? props => props.theme.txtFocus : "#aaa"}`,
-                                        fontWeight: `${location.pathname === item.path ? "bold" : "normal"}`
+                                        color: `${location.pathname === item.path ? "#666" : "#ccc"}`,
+                                        fontWeight: `${location.pathname === item.path ? "bold" : "normal"}`,
+                                        fontSize: `${location.pathname === item.path ? "18px" : "16px"}`
                                     }}>
                                     <p>{item.tap}</p>
                                     <IoIosArrowForward/>

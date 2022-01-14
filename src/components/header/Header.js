@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { quotes } from '../common/Quotes';
 import Nav from '../nav/Nav';
 import ShowQuotes from './ShowQuotes';
 

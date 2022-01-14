@@ -37,7 +37,6 @@ const SearchBookInput = ({searching}) => {
     const onSubmit = (e) => {
         e.preventDefault() 
         if (!text) return;
-        // text 를 전달
         searching(text)
         setText('')
         textRef.current.focus()
@@ -46,7 +45,6 @@ const SearchBookInput = ({searching}) => {
     return (
         <SearchForm onSubmit={onSubmit}>
             <SearchInput type="text" placeholder="Find the book." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
-            {/* <button type="submit">찾기</button> */}
             <SearchIcon>
                 <IoSearchSharp/>
             </SearchIcon>

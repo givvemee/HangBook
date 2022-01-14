@@ -85,7 +85,6 @@ const TodayItem = ({recommend}) => {
                     <p><span>현재 베스트셀러 순위 : </span>{bestRank}</p>
                 </TodaysRightBtm>
             </TodaysRight>
-            {/* <h2>ㅠㅠㅠ</h2> */}
         </TodaysWrap>
     );
 };
