@@ -4,7 +4,7 @@ export const lightMode = {
     bgColor: "#e6e9f1",
     textColor: "#333333",
     txtFocus: "#223d7f",
-    rightBg: "#eee",
+    rightBg: "#fefefe",
     itemBg: "#f5f0f7",
 }
 

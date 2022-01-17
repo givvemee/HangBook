@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { BrowserRouter as Router, HashRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/header/Header';
 import BestSellerMain from './components/main/bestSellers/BestSellerMain';
-import Today from './components/main/Today(test)/Today'
+import Today from './components/main/Today/Today'
 import SearchBookMain from './components/main/searchBooks/SearchBookMain';
 import '../src/components/common/reset.css'
 import styled, { ThemeProvider } from 'styled-components';
