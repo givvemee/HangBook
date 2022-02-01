@@ -19,23 +19,12 @@ const SearchBookMain = () => {
         const searchData = async () => {
             try {
                 const res = await axios.get(searchApi)
-                // 끝에 세미콜론이 들어감! 
-                console.log(typeof res);
-                console.log(res.data.length);
-                
-                // console.log(res.data.substr(0, res.data.length - 1));
-                // console.log(JSON.parse(res.data.substr(0, res.data.length - 1)))
-                const parsed = JSON.parse(res.data.substr(0, res.data.length - 1));
-                // console.log(parsed)
-                
+                const parsed = JSON.parse(res.data.substr(0, res.data.length - 1));                
                 setIsLoading(true)
                 setError(null)
-                // setData(res.data.item)
                 setData(parsed.item)
-                console.log(typeof parsed.item);
             } catch (e) {
                 setError('Something went wrong')
-                console.log(e)
             }
             setIsLoading(false)
         }
@@ -46,7 +35,6 @@ const SearchBookMain = () => {
     const searching = keyword => {
         setkeyword(keyword)
     }
-    // console.log(data)
     return (
         <div>
             <Title titleText="Search Books"/>

@@ -21,8 +21,6 @@ const Main = () => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
-                // console.log(Math.floor(Math.random(res.data.item) * res.data.item.length))
-                console.log(res.data.item[Math.floor(Math.random(res.data.item) * res.data.item.length)])
                 setRecommend(res.data.item[Math.floor(Math.random(res.data.item) * res.data.item.length)])
             } catch (e) {
                 setError(e)
@@ -30,16 +28,7 @@ const Main = () => {
             setLoading(false)
         }
         getData()
-        console.log(setRecommend)
     }, [])
-    console.log(recommend)
-
-    // if (loading) {
-    //     return <div>Now Loading...</div>
-    // }
-    // if (error) {
-    //     return <div>Something went wrong</div>
-    // }
     return (
         <>
             <Title titleText="Today's Recommend for you"/>

@@ -42,7 +42,6 @@ const MenuList = styled.li`
 `
 const Nav = () => {
     const location = useLocation();
-    console.log(location.pathname);
 
     return ( 
         <NavCont>
