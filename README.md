@@ -17,6 +17,7 @@
 #### 🪡 KEY POINTS
 - `axios` 를 이용한 api 연동
 - Dark mode / Light mode 구현
+- keyword query 를 이용한 검색 기능 구현
 <br/>
 <hr/>
 #### 🖥 PREVIEW 
