@@ -14,7 +14,7 @@ const Main = () => {
     const [recommend, setRecommend] = useState([]);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
-    const apiKey = 'ttb201403672030001'
+    const apiKey = process.env.REACT_APP_API_KEY;
     const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
 
     useEffect(() => {

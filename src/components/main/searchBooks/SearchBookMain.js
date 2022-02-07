@@ -12,7 +12,7 @@ const SearchBookMain = () => {
     const [error , setError] = useState('')
     const [keyword, setkeyword] = useState('리액트')
     
-    const apiKey = 'ttb201403672030001'
+    const apiKey = process.env.REACT_APP_API_KEY;
     const searchApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=${apiKey}&Query=${keyword}&QueryType=Title&MaxResults=10&start=1&SearchTarget=Book&output=js&Version=20070901&Cover=Big`
    
     useEffect(() => {
