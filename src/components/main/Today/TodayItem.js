@@ -35,7 +35,6 @@ const SearchTitle = styled.div`
 const TodaysCategory = styled.div`
     color: #aaa;
     width: 80%;
-    /* margin: 0 auto; */
     font-size: 12px;
 `
 const TodaysDesc = styled.div`
@@ -82,7 +81,7 @@ const TodayItem = ({recommend}) => {
                     <p><span>출간일 : </span>{pubDate}</p>
                     <p><span>ISBN : </span>{isbn}</p>
                     <p><span>가격 : </span>{priceSales}</p>
-                    <p><span>현재 베스트셀러 순위 : </span>{bestRank}</p>
+                    {/* <p><span>현재 베스트셀러 순위 : </span>{bestRank}</p> */}
                 </TodaysRightBtm>
             </TodaysRight>
         </TodaysWrap>

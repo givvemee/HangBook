@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/HangBook/static/css/main.061d34b2.chunk.css",
-    "main.js": "/HangBook/static/js/main.22eaa8d5.chunk.js",
-    "main.js.map": "/HangBook/static/js/main.22eaa8d5.chunk.js.map",
+    "main.js": "/HangBook/static/js/main.66c70c0f.chunk.js",
+    "main.js.map": "/HangBook/static/js/main.66c70c0f.chunk.js.map",
     "runtime-main.js": "/HangBook/static/js/runtime-main.867f37b1.js",
     "runtime-main.js.map": "/HangBook/static/js/runtime-main.867f37b1.js.map",
-    "static/js/2.a9499345.chunk.js": "/HangBook/static/js/2.a9499345.chunk.js",
-    "static/js/2.a9499345.chunk.js.map": "/HangBook/static/js/2.a9499345.chunk.js.map",
+    "static/js/2.d64dea9c.chunk.js": "/HangBook/static/js/2.d64dea9c.chunk.js",
+    "static/js/2.d64dea9c.chunk.js.map": "/HangBook/static/js/2.d64dea9c.chunk.js.map",
     "index.html": "/HangBook/index.html",
     "static/css/main.061d34b2.chunk.css.map": "/HangBook/static/css/main.061d34b2.chunk.css.map",
-    "static/js/2.a9499345.chunk.js.LICENSE.txt": "/HangBook/static/js/2.a9499345.chunk.js.LICENSE.txt",
+    "static/js/2.d64dea9c.chunk.js.LICENSE.txt": "/HangBook/static/js/2.d64dea9c.chunk.js.LICENSE.txt",
     "static/media/font.css": "/HangBook/static/media/Montserrat-Medium.e2d60bc4.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.867f37b1.js",
-    "static/js/2.a9499345.chunk.js",
+    "static/js/2.d64dea9c.chunk.js",
     "static/css/main.061d34b2.chunk.css",
-    "static/js/main.22eaa8d5.chunk.js"
+    "static/js/main.66c70c0f.chunk.js"
   ]
 }

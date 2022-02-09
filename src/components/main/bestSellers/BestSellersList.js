@@ -9,7 +9,6 @@ const BestItemsWrap = styled.div`
 const BestItems = styled.div`
     width: 130px;
     height: 170px;
-    /* padding: 20px; */
     margin: 10px auto;
     background: ${props => props.theme.itemBg};
     border-radius: 20px;
