@@ -1,6 +1,6 @@
 
 
-# Hang-Book Project (Incompleted)
+# Hang-Book Project 
 <hr/>
 
 #### 📌 SUMMARY
