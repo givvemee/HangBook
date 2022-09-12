@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 const LoadingWrap = styled.div`
@@ -15,7 +14,10 @@ const LoadingTitle = styled.h3`
     font-style: italic;
     color: ${props => props.theme.textColor};
 `
-const Loading = ({loadingTxt}) => {
+type LoadMsg = {
+    loadingTxt: string
+}
+const Loading = ({loadingTxt}: LoadMsg) => {
     return (
         <LoadingWrap>
             <LoadingTitle>{loadingTxt}</LoadingTitle>

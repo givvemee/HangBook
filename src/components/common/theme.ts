@@ -1,5 +1,3 @@
-import styled, {DefaultTheme} from "styled-components";
-
 export const lightMode = {
     bgColor: "#e6e9f1",
     textColor: "#333333",

@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Title from '../../common/Title';
 import Loading from '../../common/Loading';
 
-
 const BestSellerWrap = styled.div`
     width: 95%;
     margin: 0 auto;
@@ -13,17 +12,16 @@ const BestSellerWrap = styled.div`
     height: 560px;
     display: flex;
     flex-wrap: wrap;
-    /* overflow-x: hidden; */
     position: relative;
 `
 const BestSellerView = styled.div`
-    /* border: 1px solid red; */
     overflow-x: hidden;
 `
+
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState([]);
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [loading, setLoading] = useState<boolean>(true)
+    const [error, setError] = useState<unknown | null>(null)
     const apiKey = process.env.REACT_APP_API_KEY;
     const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
     
