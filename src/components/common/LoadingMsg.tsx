@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 
 const HeadTitle = styled.h2`
@@ -8,7 +7,11 @@ const HeadTitle = styled.h2`
     font-weight: bold;
     margin-bottom: 20px;
 `
-const LoadingMsg = ({loadingText}) => {
+
+type Loadings = {
+    loadingText: string
+}
+const LoadingMsg = ({loadingText}: Loadings) => {
 
     return (
         <HeadTitle>{loadingText}</HeadTitle>

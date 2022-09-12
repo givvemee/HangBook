@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { quotes } from '../common/Quotes';
 import { FaQuoteLeft,FaQuoteRight } from "react-icons/fa";
 import { IoMdRefreshCircle } from "react-icons/io";
 import styled from 'styled-components';
-
 
 const QuoteWrap = styled.div`
     width: 100%;

@@ -8,7 +8,11 @@ const HeadTitle = styled.h2`
     margin-bottom: 20px;
     color: ${props => props.theme.textColor};
 `
-const Title = ({titleText}) => {
+
+type Titles = {
+    titleText: string
+}
+const Title = ({titleText}: Titles) => {
 
     return (
         <HeadTitle>{titleText}</HeadTitle>

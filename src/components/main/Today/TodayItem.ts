@@ -58,14 +58,13 @@ const TodaysRightBtm = styled.div`
         font-weight: bold;
     }
 `
+
 const TodayItem = ({recommend}) => {
     const {title, description, categoryName, cover, isbn, author, pubDate, priceSales, publisher, bestRank} = recommend;
     return (
 
         <TodaysWrap>
-
             <TodaysLeft>
-
                 <TodaysImg src={cover} alt={title} />
             </TodaysLeft>
             <TodaysRight>

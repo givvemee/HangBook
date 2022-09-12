@@ -10,8 +10,11 @@ const ModeChange = styled.button`
     border: none;
     cursor: pointer;
 `
-
-const ThemeChange = ({title, clickToModeChange}) => {
+type ThemeChanges = {
+    title: string,
+    clickToModeChange: string
+}
+const ThemeChange = ({title, clickToModeChange}: ThemeChanges) => {
     return (
         <ModeChange onClick={clickToModeChange}>
             <span>{title}</span>
