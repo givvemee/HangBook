@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IBook } from '../../common/interface';
 
 const SearchBookItems = styled.div`
     width: 44%;
@@ -19,7 +20,12 @@ const ItemTitle = styled.p`
 const ItemAuthor = styled.p`
     font-size: 12px;
 `
-const SearchBookSub = ({books}) => {
+
+type Propss = {
+    books: IBook;
+}
+
+const SearchBookSub = ({books}: Propss) => {
     const {title, author} = books
     return (
         <SearchBookItems>

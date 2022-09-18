@@ -1,9 +1,10 @@
 export interface IBook {
-  title?: string,
+  title: string,
   description?: string,
   categoryName?: string,
   cover?: string, 
   isbn?: number, 
+  isbn13?: number, 
   author?: string, 
   pubDate?: string, 
   priceSales?: number, 

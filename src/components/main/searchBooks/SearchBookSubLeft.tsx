@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IBook } from '../../common/interface';
 
 const LeftImg = styled.img`
     width: 160px;
@@ -25,7 +26,11 @@ const LeftDesc = styled.p`
     width: 80%;
     margin: 10px auto;
 `
-const SearchBookSubLeft = ({books}) => {
+type Propss = {
+    books: IBook;
+}
+
+const SearchBookSubLeft = ({books}: Propss) => {
     const {title, author, cover, description} = books;
     return (
         <>
