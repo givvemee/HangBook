@@ -4,19 +4,7 @@ import BestSellersList from './BestSellersList';
 import styled from 'styled-components';
 import Title from '../../common/Title';
 import Loading from '../../common/Loading';
-
-const BestSellerWrap = styled.div`
-    width: 95%;
-    margin: 0 auto;
-    padding-top: 20px;
-    height: 560px;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-`
-const BestSellerView = styled.div`
-    overflow-x: hidden;
-`
+import { IBook } from '../../common/interface';
 
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState([]);
@@ -52,7 +40,7 @@ const BestSellerMain = () => {
                     </> : 
                     <BestSellerWrap>
                     {
-                        bestSellers.map(items => <BestSellersList key={items.isbbn13} items={items} />)
+                        bestSellers.map((items: IBook) => <BestSellersList key={items.isbn13} items={items} />)
                     }
                     </BestSellerWrap>
                 }
@@ -62,3 +50,16 @@ const BestSellerMain = () => {
 };
 
 export default BestSellerMain;
+
+const BestSellerWrap = styled.div`
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+`
+const BestSellerView = styled.div`
+    overflow-x: hidden;
+`

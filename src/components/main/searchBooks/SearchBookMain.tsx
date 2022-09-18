@@ -9,7 +9,7 @@ import SearchBookSubLeft from './SearchBookSubLeft';
 const SearchBookMain = () => {
     const [data , setData] = useState([])
     const [isLoading , setIsLoading] = useState(true)
-    const [error , setError] = useState('')
+    const [error , setError] = useState<null | string>('')
     const [keyword, setkeyword] = useState('리액트')
     
     const apiKey = process.env.REACT_APP_API_KEY;
@@ -32,7 +32,7 @@ const SearchBookMain = () => {
     }, [keyword])
 
 
-    const searching = keyword => {
+    const searching = (keyword: string) => {
         setkeyword(keyword)
     }
     return (
