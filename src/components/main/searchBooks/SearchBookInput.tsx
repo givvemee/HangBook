@@ -1,6 +1,34 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { IoSearchSharp } from "react-icons/io5";
+
+interface IInput {
+    searching: (val: string) => void,
+} 
+
+const SearchBookInput = ({searching}: IInput) => {
+    const textRef = useRef<HTMLInputElement>();
+    const [ text , setText ] = useState('react')
+
+    const onSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.preventDefault() 
+        if (!text) return;
+        searching(text)
+        setText('')
+        textRef.current.focus()
+    }
+
+    return (
+        <SearchForm onSubmit={onSubmit}>
+            <SearchInput type="text" placeholder="Find the book." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
+            <SearchIcon>
+                <IoSearchSharp/>
+            </SearchIcon>
+        </SearchForm>
+    );
+};
+
+export default SearchBookInput;
 
 const SearchForm = styled.form`
     width: 400px;
@@ -29,27 +57,3 @@ const SearchIcon = styled.div`
     left: 20px;
     font-size: 20px;
 `
-
-const SearchBookInput = ({searching}) => {
-    const textRef = useRef()
-    const [ text , setText ] = useState('react')
-
-    const onSubmit = (e) => {
-        e.preventDefault() 
-        if (!text) return;
-        searching(text)
-        setText('')
-        textRef.current.focus()
-    }
-
-    return (
-        <SearchForm onSubmit={onSubmit}>
-            <SearchInput type="text" placeholder="Find the book." value={ text } onChange={ e => setText( e.target.value) } ref={textRef}/>
-            <SearchIcon>
-                <IoSearchSharp/>
-            </SearchIcon>
-        </SearchForm>
-    );
-};
-
-export default SearchBookInput;

@@ -1,7 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IBook } from '../../common/interface';
 import SearchBookSub from './SearchBookSub';
 import SearchBookSubLeft from './SearchBookSubLeft';
+
+type Propss = {
+    data: IBook[];
+}
+
+const SearchBookCont = ({data}: Propss) => {
+    return (
+        <SearchBookWrap>
+            {
+                data.slice(0, 1).map(books => 
+                    <SearchBookLeft>
+                        <SearchBookSubLeft key={books.isbn13} books={books}/>
+                    </SearchBookLeft>
+                )
+            }
+            <SearchBookRight>
+                {
+                    data.slice(1,5).map(books => 
+                    <SearchBookSub key={books.isbn} books={books}/>)
+                }
+            </SearchBookRight>
+
+        </SearchBookWrap>
+    );
+};
+
+export default SearchBookCont;
+
 
 const SearchBookWrap = styled.div`
     width: 100%;
@@ -24,25 +53,3 @@ const SearchBookRight = styled.div`
     overflow: hidden;
     padding: 10px;
 `
-const SearchBookCont = ({data}) => {
-    return (
-        <SearchBookWrap>
-            {
-                data.slice(0, 1).map(books => 
-                    <SearchBookLeft>
-                        <SearchBookSubLeft key={books.isbn13} books={books}/>
-                    </SearchBookLeft>
-                )
-            }
-            <SearchBookRight>
-                {
-                    data.slice(1,5).map(books => 
-                    <SearchBookSub key={books.isbn} books={books}/>)
-                }
-            </SearchBookRight>
-
-        </SearchBookWrap>
-    );
-};
-
-export default SearchBookCont;

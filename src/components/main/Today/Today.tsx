@@ -1,34 +1,51 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import TodayItem from './TodayItem';
 import Title from '../../common/Title';
 import styled from 'styled-components';
 import Loading from '../../common/Loading';
+import { IBook } from '../../common/interface';
 
 const TodaysSubTitle = styled.p`
     width: 95%;
     margin: 0 auto;
     color: ${props => props.theme.textColor};
 `
+type BookProps = {
+    item: IBook[];
+};
+
+type Response = {
+    
+}
+
+interface IAxiosData {
+    data: IBook[];
+    item: IBook[];
+}
+
 const Main = () => {
-    const [recommend, setRecommend] = useState([]);
+    const [recommend, setRecommend] = useState<IBook[]>([]);
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState<unknown | string>(null)
     const apiKey = process.env.REACT_APP_API_KEY;
     const bestSellersApi = `https://cors-anywhere.herokuapp.com/https://www.aladin.co.kr/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`
 
+    
     useEffect(() => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
-                setRecommend(res.data.item[Math.floor(Math.random(res.data.item) * res.data.item.length)])
+                const resData= res.data.item;
+                setRecommend(resData[Math.floor(Math.random(resData) * resData.length)])
             } catch (e) {
                 setError(e)
             }
             setLoading(false)
         }
         getData()
-    }, [])
+    }, []);
+
     return (
         <>
             <Title titleText="Today's Recommend for you"/>
