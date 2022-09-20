@@ -44,7 +44,7 @@ const App = () => {
     else {
       setThemeMode("light")
       window.localStorage.setItem('theme', 'light');
-    };
+    }
   }, [themeMode]);
   
   return (

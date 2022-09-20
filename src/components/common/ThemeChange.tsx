@@ -12,7 +12,8 @@ const ModeChange = styled.button`
 `
 type ThemeChanges = {
     title: string,
-    clickToModeChange: string
+    clickToModeChange: () => void,
+    // onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 const ThemeChange = ({title, clickToModeChange}: ThemeChanges) => {
     return (
