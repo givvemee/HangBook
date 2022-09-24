@@ -15,7 +15,7 @@ const SearchBookInput = ({searching}: IInput) => {
         if (!text) return;
         searching(text)
         setText('')
-        textRef.current.focus()
+        textRef?.current?.focus()
     }
 
     return (

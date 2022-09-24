@@ -11,3 +11,8 @@ export interface IBook {
   publisher?: string, 
   bestRank?: number
 }
+
+export type Tprops = {
+  item?: IBook[];
+  recommend?: IBook;
+}

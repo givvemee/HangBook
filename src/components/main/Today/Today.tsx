@@ -5,27 +5,13 @@ import Title from '../../common/Title';
 import styled from 'styled-components';
 import Loading from '../../common/Loading';
 import { IBook } from '../../common/interface';
-
-const TodaysSubTitle = styled.p`
-    width: 95%;
-    margin: 0 auto;
-    color: ${props => props.theme.textColor};
-`
-type BookProps = {
-    item: IBook[];
-};
-
-type Response = {
-    
-}
-
 interface IAxiosData {
     data: IBook[];
     item: IBook[];
 }
 
 const Main = () => {
-    const [recommend, setRecommend] = useState<IBook[]>([]);
+    const [recommend, setRecommend] = useState<IBook[] | []>([]);
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState<unknown | string>(null)
     const apiKey = process.env.REACT_APP_API_KEY;
@@ -36,7 +22,7 @@ const Main = () => {
         const getData = async () => {
             try {
                 const res = await axios.get(bestSellersApi)
-                const resData= res.data.item;
+                const resData = res?.data?.item;
                 setRecommend(resData[Math.floor(Math.random(resData) * resData.length)])
             } catch (e) {
                 setError(e)
@@ -65,3 +51,9 @@ const Main = () => {
 };
 
 export default Main;
+
+const TodaysSubTitle = styled.p`
+    width: 95%;
+    margin: 0 auto;
+    color: ${props => props.theme.textColor};
+`
