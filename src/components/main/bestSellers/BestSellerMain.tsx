@@ -7,7 +7,7 @@ import Loading from '../../common/Loading';
 import { IBook } from '../../common/interface';
 
 const BestSellerMain = () => {
-    const [bestSellers, setBestSellers] = useState([]);
+    const [bestSellers, setBestSellers] = useState<IBook[] | []>([]);
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<unknown | null>(null)
     const apiKey = process.env.REACT_APP_API_KEY;
