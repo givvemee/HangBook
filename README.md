@@ -2,11 +2,14 @@
 
 # Hang-Book Project 
 <hr/>
+#### ☝️ 2.0 Update
+- Javascript 에서 Typescript 리팩토링
 
 #### 📌 SUMMARY
 - **프로젝트 명** Hang-Book (Haning-Out with Books)
 - **프로젝트 개요** API 를 이용하여 베스트 셀러 조회, 책 추천, 검색 기능을 구현한 웹 앱
 - **기간** 2021.11 ~ 2022. 01 
+
 <br/>
 
 #### 🛠 STACKS
