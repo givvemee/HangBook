@@ -4,7 +4,6 @@ import BestSellersList from "./BestSellersList";
 import styled from "styled-components";
 import Title from "../../common/Title";
 import Loading from "../../common/Loading";
-// import { IBook } from "../../common/interface";
 
 const BestSellerMain = () => {
     const [bestSellers, setBestSellers] = useState<IResponse["item"][] | []>(

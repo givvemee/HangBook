@@ -5,12 +5,8 @@ import Title from "../../common/Title";
 import styled from "styled-components";
 import Loading from "../../common/Loading";
 
-// type ItemCounting = {
-//     [responseData: string]: number
-// }
-
 const Main = () => {
-    const [recommend, setRecommend] = useState<IResponse["item"] | []>([]);
+    const [recommend, setRecommend] = useState<IResponse["item"]>();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<unknown | string>(null);
     const apiKey = process.env.REACT_APP_API_KEY;
@@ -21,11 +17,8 @@ const Main = () => {
             try {
                 const res = await axios.get(bestSellersApi);
                 setRecommend(
-                    res.data?.item[
-                        Math.floor(
-                            Math.random(res.data?.item) *
-                                (res.data?.item).length
-                        )
+                    res.data.item[
+                        Math.floor(Math.random() * (res.data?.item).length)
                     ]
                 );
             } catch (e) {
@@ -43,13 +36,12 @@ const Main = () => {
                 HangBook will recommend a book only for you.
             </TodaysSubTitle>
             <div>
-                {loading ? (
+                {loading && (
                     <>
                         <Loading loadingTxt="Now Loading..." />
                     </>
-                ) : (
-                    <TodayItem recommend={recommend} />
                 )}
+                {recommend && <TodayItem recommend={recommend} />}
             </div>
         </>
     );
