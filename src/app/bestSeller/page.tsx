@@ -1,10 +1,10 @@
 'use client';
+import Loading from '@/components/common/Loading';
+import Title from '@/components/common/Title';
+import BestSellersList from '@/components/main/bestSellers/BestSellersList';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import Loading from '../../common/Loading';
-import Title from '../../common/Title';
-import BestSellersList from './BestSellersList';
 
 const BestSellerMain = () => {
   //   const [bestSellers, setBestSellers] = useState<IResponse['item'][] | []>([]);
