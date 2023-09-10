@@ -1,11 +1,37 @@
+import { Metadata } from 'next';
+
+import Header from '@/components/header';
+import Mode from '@/components/mode';
+import Nav from '@/components/nav';
+import Quotes from '@/components/quotes';
+import { resetCss } from 'styles/reset';
+import { getCssText } from 'styles/stitches.config';
+import { FullWrap, LeftSide, MainBack } from './style';
+
 export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
+  resetCss();
+  return (
+    <>
+      <style>{getCssText()}</style>
+
+      <MainBack>
+        <FullWrap>
+          <LeftSide>
+            <Header />
+            <Nav />
+            <Quotes />
+          </LeftSide>
+        </FullWrap>
+        <Mode />
+      </MainBack>
+    </>
+  );
 }
 
-// export const metadata: Metadata = {
-//   title: 'HangBook',
-//   description: 'Hanging out with Books',
-// };
+export const metadata: Metadata = {
+  title: 'HangBook',
+  description: 'Hanging out with Books',
+};
 
 // export const Page = () => {
 //   return (
@@ -57,26 +83,3 @@ export default function Page() {
   );
 }; */
 }
-
-// const MainBack = styled.div`
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: ${(props) => props.theme.bgColor};
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-// `;
-// const FullWrap = styled.div`
-//   width: 70vw;
-//   height: 80vh;
-//   padding: 90px 50px;
-//   font-family: 'Montserrat';
-//   border-radius: 20px;
-//   display: grid;
-//   grid-template-columns: 0.3fr 0.7fr;
-//   background: ${(props) => props.theme.rightBg};
-//   & > div {
-//     overflow-x: hidden;
-//   }
-// `;
