@@ -12,7 +12,6 @@ export const MainBack = styled('div', {
 
 export const FullWrap = styled('div', {
   width: '70vw',
-  height: '80vh',
   padding: '90px 50px',
   fontFamily: 'Montserrat',
   borderRadius: '20px',
@@ -36,5 +35,4 @@ export const LeftSide = styled('div', {
 
 export const RightSide = styled('div', {
   width: '100%',
-  border: '1px solid red',
 });

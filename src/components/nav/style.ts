@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { IoIosArrowForward } from 'react-icons/io';
 import { styled } from 'styles/stitches.config';
 
@@ -14,17 +15,27 @@ export const MenuList = styled('li', {
   height: '80px',
   fontSize: '20px',
   listStyle: 'none',
+  fontWeight: 'bold',
+});
+
+export const MenuLink = styled(Link, {
+  color: '#AAA',
+  textDecoration: 'none',
+  width: '100%',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  fontWeight: 'bold',
 
-  a: {
-    color: '#aaa',
-    textDecoration: 'none',
+  variants: {
+    isActive: {
+      true: {
+        color: '#000',
+      },
+      false: {
+        color: '#AAA',
+      },
+    },
   },
 });
 
-export const Arrow = styled(IoIosArrowForward, {
-  color: '#aaa',
-});
+export const Arrow = styled(IoIosArrowForward, {});
