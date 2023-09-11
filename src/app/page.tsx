@@ -4,16 +4,11 @@ import Header from '@/components/header';
 import Mode from '@/components/mode';
 import Nav from '@/components/nav';
 import Quotes from '@/components/quotes';
-import { resetCss } from 'styles/reset';
-import { getCssText } from 'styles/stitches.config';
 import { FullWrap, LeftSide, MainBack } from './style';
 
 export default function Page() {
-  resetCss();
   return (
     <>
-      <style>{getCssText()}</style>
-
       <MainBack>
         <FullWrap>
           <LeftSide>
