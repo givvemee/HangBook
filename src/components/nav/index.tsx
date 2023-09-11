@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import { IoIosArrowForward } from 'react-icons/io';
 import { NAV_LIST } from './init';
-import { MenuList, NavContainer, NavListWrap } from './style';
+import { Arrow, MenuList, NavContainer, NavListWrap } from './style';
 
 const Nav = () => {
   return (
@@ -23,9 +22,9 @@ const Nav = () => {
                 //   }`,
                 // }}
               >
-                <p>{item.tap}</p>
-                <IoIosArrowForward />
+                <span>{item.tap}</span>
               </Link>
+              <Arrow />
             </MenuList>
           ))}
         </NavListWrap>
