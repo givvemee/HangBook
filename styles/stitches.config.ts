@@ -17,6 +17,7 @@ export const {
       text: '#333333',
       subText: '#666666',
       inactiveText: '#CCCCCC',
+      normalGrey: '#EEEEEE',
     },
   },
   media: {
@@ -31,5 +32,6 @@ export const darkTheme = createTheme({
     text: '#E6E9F1',
     subText: '#666666',
     inactiveText: '#CCCCCC',
+    normalGrey: '#EEEEEE',
   },
 });
