@@ -29,10 +29,10 @@ export const MenuLink = styled(Link, {
   variants: {
     isActive: {
       true: {
-        color: '#000',
+        color: '$subText',
       },
       false: {
-        color: '#AAA',
+        color: '$inactiveText',
       },
     },
   },

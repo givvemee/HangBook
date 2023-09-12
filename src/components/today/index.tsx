@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useStore } from 'store';
 import Loading from '../common/loading/index';
+import { PageTitle } from '../common/style';
 import TodayItem from './TodayItem';
 import { ItemType } from './TodayItem/type';
 import { TodaySubTitle } from './style';
@@ -33,7 +34,10 @@ const TodayContainer = () => {
 
   return (
     <>
-      <TodaySubTitle>Today, HangBook's recommendation</TodaySubTitle>
+      <PageTitle>Today's Recommend for you</PageTitle>
+      <TodaySubTitle>
+        HangBook will recommend a book only for you.
+      </TodaySubTitle>
       {isLoading && <Loading />}
       {item && <TodayItem {...item} />}
     </>

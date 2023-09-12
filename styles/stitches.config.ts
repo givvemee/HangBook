@@ -12,11 +12,24 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      gray400: 'gainsboro',
-      gray500: 'lightgray',
+      background: '#E6E9F1',
+      container: '#FEFEFE',
+      text: '#333333',
+      subText: '#666666',
+      inactiveText: '#CCCCCC',
     },
   },
   media: {
     bp1: '(min-width: 480px)',
+  },
+});
+
+export const darkTheme = createTheme({
+  colors: {
+    background: '#0B0B09',
+    container: '#19160E',
+    text: '#E6E9F1',
+    subText: '#666666',
+    inactiveText: '#CCCCCC',
   },
 });

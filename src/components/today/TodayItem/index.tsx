@@ -1,5 +1,3 @@
-import Loading from '@/components/common/loading/index';
-import { useStore } from 'store';
 import {
   SearchTitle,
   TodaysCategory,
@@ -13,12 +11,8 @@ import {
 import { ItemType } from './type';
 
 const TodayItem = (props: ItemType) => {
-  
-
   return (
     <TodaysWrap>
-      
-
       <TodaysLeft>
         <TodaysImg src={props.cover} alt={props.title} />
       </TodaysLeft>

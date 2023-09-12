@@ -3,11 +3,11 @@ import { styled } from '../../styles/stitches.config';
 export const MainBack = styled('div', {
   width: '100vw',
   height: '100vh',
-  //TODO
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   position: 'relative',
+  background: '$background',
 });
 
 export const FullWrap = styled('div', {
@@ -17,8 +17,7 @@ export const FullWrap = styled('div', {
   borderRadius: '20px',
   display: 'grid',
   gridTemplateColumns: '.25fr .75fr',
-  //TODO
-  background: 'lightgrey',
+  background: '$container',
 
   '> div': {
     overflowX: 'hidden',

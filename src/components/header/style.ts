@@ -21,8 +21,7 @@ export const HeaderTitle = styled('h1', {
   textAlign: 'center',
   padding: '0px',
   height: 'auto',
-  // TODO
-  // color: ${(props) => props.theme.textColor};
+  color: '$text',
   span: {
     fontStyle: 'italic',
     fontSize: '24px',

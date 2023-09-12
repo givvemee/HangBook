@@ -29,5 +29,4 @@ export const QuoteRefresh = styled('button', {
   background: 'none',
   border: 'none',
   cursor: 'pointer',
-  // TODO Color
 });

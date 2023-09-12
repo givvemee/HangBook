@@ -8,7 +8,6 @@ export const TodaysWrap = styled('div', {
   justifyContent: 'space-between',
   position: 'relative',
   paddingTop: '60px',
-  // color: ${(props) => props.theme.textColor};
 });
 
 export const TodaysLeft = styled('div', {
@@ -33,17 +32,19 @@ export const SearchTitle = styled('div', {
   margin: '20px 0',
   padding: '10px 0 0',
   fontWeight: 'bold',
+  color: '$text',
 });
 
 export const TodaysCategory = styled('div', {
-  color: '#aaa',
   width: '80%',
   fontSize: '12px',
+  color: '$text',
 });
 
 export const TodaysDesc = styled('div', {
   fontSize: '18px',
   margin: '20px 0 40px',
+  color: '$text',
 });
 
 export const TodaysRightBtm = styled('div', {
@@ -51,6 +52,7 @@ export const TodaysRightBtm = styled('div', {
   paddingTop: '20px',
   display: 'flex',
   flexWrap: 'wrap',
+  color: '$text',
   p: { width: '49%', margin: '5px 0', marginRight: '1%', fontSize: '14px' },
   span: { fontSize: '16px', marginRight: '10px', fontWeight: 'bold' },
 });
