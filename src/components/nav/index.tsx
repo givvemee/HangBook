@@ -1,11 +1,11 @@
 'use client';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { NAV_LIST } from './init';
 import { Arrow, MenuLink, MenuList, NavContainer, NavListWrap } from './style';
 
 const Nav = () => {
   const pathname = usePathname();
-  console.log();
+  const router = useRouter();
   return (
     <NavContainer>
       <nav>

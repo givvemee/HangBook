@@ -1,80 +1,9 @@
-import { Metadata } from 'next';
-
-import Header from '@/components/header';
-import Mode from '@/components/mode';
-import Nav from '@/components/nav';
-import Quotes from '@/components/quotes';
-import { FullWrap, LeftSide, MainBack } from './style';
+import TodayContainer from '@/components/today';
 
 export default function Page() {
   return (
     <>
-      <MainBack>
-        <FullWrap>
-          <LeftSide>
-            <Header />
-            <Nav />
-            <Quotes />
-          </LeftSide>
-        </FullWrap>
-        <Mode />
-      </MainBack>
+      <TodayContainer />
     </>
   );
-}
-
-export const metadata: Metadata = {
-  title: 'HangBook',
-  description: 'Hanging out with Books',
-};
-
-// export const Page = () => {
-//   return (
-//     <>
-{
-  /* <ThemeProvider theme={theme}> */
-}
-{
-  /* <MainBack> */
-}
-{
-  /* <ThemeChange
-            title={theme === lightMode ? '🌚' : '🌝'}
-            clickToModeChange={toggleTheme}
-          /> */
-}
-{
-  /* <HashRouter> */
-}
-{
-  /* <FullWrap>
-          <Header />❌
-          <div> */
-}
-{
-  /* <Switch>
-                  <Route path="/" component={Today} exact />
-                  <Route path="/bestSellers" component={BestSellerMain} />
-                  <Route path="/searchBooks" component={SearchBookMain} />
-                </Switch> */
-}
-{
-  /* </div> */
-}
-{
-  /* </FullWrap> */
-}
-{
-  /* </HashRouter> */
-}
-{
-  /* </MainBack> */
-}
-{
-  /* </ThemeProvider> */
-}
-{
-  /* </>
-  );
-}; */
 }

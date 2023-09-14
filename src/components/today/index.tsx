@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { useStore } from 'store';
 import Loading from '../common/loading/index';
 import { PageTitle } from '../common/style';
+import { bestSellersApi } from '../utils';
 import TodayItem from './TodayItem';
 import { ItemType } from './TodayItem/type';
 import { TodaySubTitle } from './style';
@@ -12,8 +13,6 @@ import { TodaySubTitle } from './style';
 const TodayContainer = () => {
   const { isLoading, setIsLoading } = useStore();
   const [item, setItem] = useState<ItemType>();
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
-  const bestSellersApi = `/ttb/api/ItemList.aspx?ttbkey=${apiKey}&QueryType=Bestseller&MaxResults=50&start=1&SearchTarget=Book&output=js&Version=20131101&Cover=Big`;
 
   useEffect(() => {
     setIsLoading();
@@ -23,7 +22,6 @@ const TodayContainer = () => {
         setItem(
           res.data.item[Math.floor(Math.random() * (res.data?.item).length)]
         );
-        console.log(item);
         setIsLoading();
       } catch (error) {
         console.log(error);
