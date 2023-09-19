@@ -1,15 +1,34 @@
 {
   "extends": [
+    "plugin:import/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
   "overrides": [
     {
       "files": ["*.js", "*.jsx"],
       "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off"
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              ["builtin", "external"],
+              "internal",
+              ["parent", "sibling"],
+              "index"
+            ],
+            "newlines-between": "always",
+            "pathGroups": [
+              {
+                "pattern": "@/**",
+                "group": "internal",
+                "position": "after"
+              }
+            ]
+          }
+        ]
       }
     }
   ]
