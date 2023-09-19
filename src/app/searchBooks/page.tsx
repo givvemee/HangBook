@@ -1,5 +1,7 @@
+import SearchBooksContainer from '@/components/searchBooks';
+
 const SearchBooks = () => {
-  return <p>search books component</p>;
+  return <SearchBooksContainer />;
 };
 
 export default SearchBooks;
