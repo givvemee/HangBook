@@ -1,13 +1,11 @@
 'use client';
+
 import { useRef, useState } from 'react';
 import { IoSearchSharp } from 'react-icons/io5';
-import styled from 'styled-components';
+import { InputType } from '../type';
+import { SearchForm, SearchIcon, SearchInput } from './style';
 
-interface IInput {
-  searching: (val: string) => void;
-}
-
-const SearchBookInput = ({ searching }: IInput) => {
+const SearchBookInput = ({ searching }: InputType) => {
   const textRef = useRef<HTMLInputElement>(null);
   const [text, setText] = useState('react');
 
@@ -36,31 +34,3 @@ const SearchBookInput = ({ searching }: IInput) => {
 };
 
 export default SearchBookInput;
-
-const SearchForm = styled.form`
-  width: 400px;
-  position: relative;
-  margin: 20px auto;
-`;
-const SearchInput = styled.input`
-  width: 400px;
-  height: 40px;
-  border-radius: 20px;
-  padding-left: 45px;
-  font-family: 'Montserrat';
-  box-shadow: 2px 4px 16px 3px rgba(191, 191, 191, 0.78);
-  outline: none;
-  border: none;
-  &::placeholder {
-    font-family: 'Montserrat';
-  }
-`;
-const SearchIcon = styled.div`
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 20px;
-  font-size: 20px;
-`;
