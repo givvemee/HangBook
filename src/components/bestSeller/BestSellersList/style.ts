@@ -16,10 +16,11 @@ export const BestItems = styled('div', {
 
 export const BestRank = styled('p', {
   fontSize: '50px',
-  marginTop: '5px',
-  marginLeft: '5px',
+  marginTop: '0',
+  marginLeft: '0',
   fontStyle: 'italic',
-  fontWeight: 'bold',
+  fontFamily: '$noto',
+  fontWeight: '600',
   opacity: 0.2,
 });
 
@@ -40,7 +41,8 @@ export const BestItemTitle = styled('h4', {
   textAlign: 'center',
   color: '$text',
   fontSize: '14px',
-  fontWeight: 'bold',
+  fontFamily: '$noto',
+  fontWeight: '500',
 });
 
 export const DetailsWrap = styled('div', {
@@ -56,7 +58,8 @@ export const DetailsWrap = styled('div', {
   padding: '30px',
   display: 'flex',
   color: '#fff',
-  fontWeight: 'bold',
+  fontFamily: '$noto',
+  fontWeight: '400',
 });
 
 export const DetailsLeft = styled('div', {
@@ -71,6 +74,8 @@ export const DetailsRank = styled('h4', {
   textAlign: 'center',
   fontSize: '20px',
   padding: '20px 0',
+  fontFamily: '$montserrat',
+  fontWeight: '400',
 });
 
 export const DetailsRight = styled('div', {

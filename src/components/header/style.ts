@@ -12,7 +12,7 @@ export const Head = styled('header', {
   height: 'auto',
   display: 'flex',
   flexDirection: 'column',
-  fontFamily: 'Montserrat',
+  fontFamily: '$montserrat',
 });
 
 export const HeaderTitle = styled('h1', {
@@ -21,10 +21,13 @@ export const HeaderTitle = styled('h1', {
   textAlign: 'center',
   padding: '0px',
   height: 'auto',
+  fontFamily: '$montserrat',
+  fontWeight: '400',
   color: '$text',
   span: {
     fontStyle: 'italic',
     fontSize: '24px',
-    fontWeight: 'bold',
+    fontFamily: '$montserrat',
+    fontWeight: '600',
   },
 });

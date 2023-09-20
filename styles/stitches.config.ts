@@ -1,4 +1,17 @@
 import { createStitches } from '@stitches/react';
+import { Montserrat, Noto_Sans_KR } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '800'],
+  display: 'swap',
+});
+
+const noto = Noto_Sans_KR({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  display: 'swap',
+});
 
 export const {
   styled,
@@ -19,6 +32,10 @@ export const {
       inactiveText: '#CCCCCC',
       normalGrey: '#EEEEEE',
     },
+    fonts: {
+      montserrat: `${montserrat.style.fontFamily}, sans-serif`,
+      noto: `${noto.style.fontFamily}, sans-serif`,
+    },
   },
   media: {
     bp1: '(min-width: 480px)',
@@ -33,5 +50,9 @@ export const darkTheme = createTheme({
     subText: '#666666',
     inactiveText: '#CCCCCC',
     normalGrey: '#EEEEEE',
+  },
+  fonts: {
+    montserrat: `${montserrat.style.fontFamily}, sans-serif`,
+    noto: `${noto.style.fontFamily}, sans-serif`,
   },
 });

@@ -15,7 +15,8 @@ export const MenuList = styled('li', {
   height: '80px',
   fontSize: '20px',
   listStyle: 'none',
-  fontWeight: 'bold',
+  fontWeight: '600',
+  paddingRight: '10px',
 });
 
 export const MenuLink = styled(Link, {
@@ -25,6 +26,10 @@ export const MenuLink = styled(Link, {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  span: {
+    fontFamily: '$montserrat',
+  },
 
   variants: {
     isActive: {

@@ -11,11 +11,11 @@ export const SearchInput = styled('input', {
   height: '40px',
   borderRadius: '20px',
   paddingLeft: '45px',
-  fontFamily: 'Montserrat',
+  fontFamily: '$noto',
   boxShadow: '2px 4px 16px 3px rgba(191, 191, 191, 0.78)',
   outline: 'none',
   border: 'none',
-  '&::placeholder': { fontFamily: 'Montserrat' },
+  '&::placeholder': { fontFamily: '$noto' },
 });
 
 export const SearchIcon = styled('div', {

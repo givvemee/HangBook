@@ -20,6 +20,5 @@ export const SearchBookRight = styled('div', {
   height: '450px',
   display: 'flex',
   flexWrap: 'wrap',
-  // overflow: 'hidden',
   padding: '10px',
 });

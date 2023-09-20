@@ -28,7 +28,7 @@ const Quotes = () => {
         <FaQuoteLeft /> {quote} <FaQuoteRight />
       </p>
       <div>
-        <p> - {author}</p>
+        <p className="author"> - {author}</p>
         <p>
           <QuoteRefresh onClick={clickToNew}>
             <IoMdRefreshCircle />
