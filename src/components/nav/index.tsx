@@ -13,7 +13,7 @@ const Nav = () => {
           {NAV_LIST.map((item, index) => (
             <MenuList key={index}>
               <MenuLink
-                href={`${process.env.NEXT_PUBLIC_URI}/${item.path}`}
+                href={`/${item.path}`}
                 isActive={pathname === item.path}
               >
                 <span>{item.tap}</span>
