@@ -4,6 +4,7 @@ import Header from '@/components/header';
 import Mode from '@/components/mode';
 import Nav from '@/components/nav';
 import Quotes from '@/components/quotes';
+import { useState } from 'react';
 import { useStore } from 'store';
 import { StyleSheet } from 'styles/StyleSheet';
 import 'styles/reset.css';
@@ -12,10 +13,12 @@ import { FullWrap, LeftSide, MainBack, RightSide } from './style';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const { isDarkMode } = useStore();
+  const [isReady, setIsReady] = useState(false);
+
   return (
     <html lang="ko">
+      <StyleSheet />
       <body>
-        <StyleSheet />
         <div className={!isDarkMode ? darkTheme : ''}>
           <MainBack>
             <FullWrap>
