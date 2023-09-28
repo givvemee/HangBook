@@ -1,4 +1,4 @@
-import SearchBooksContainer from '@/components/searchBooks';
+import SearchBooksContainer from '@/components/searchBooks/index';
 
 const SearchBooks = () => {
   return <SearchBooksContainer />;

@@ -8,6 +8,7 @@ export const TodaysWrap = styled('div', {
   justifyContent: 'space-between',
   position: 'relative',
   paddingTop: '60px',
+  fontFamily: '$noto',
 });
 
 export const TodaysLeft = styled('div', {

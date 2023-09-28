@@ -60,7 +60,7 @@ const BestSellersList = (props: any) => {
         <BestItemImg src={cover} alt={title} />
       </BestItems>
       <BestItemTitle>
-        {title.length < 10 ? title : title.substr(0, 10) + '...'}
+        {title.length < 10 ? title : title.substr(0, 12) + '...'}
       </BestItemTitle>
     </BestItemsWrap>
   );

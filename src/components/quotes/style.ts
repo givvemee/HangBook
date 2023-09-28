@@ -16,11 +16,17 @@ export const QuoteWrap = styled('div', {
   '>p': {
     fontSize: '14px',
     fontStyle: 'italic',
-    fontWeight: 'bold',
+    fontWeight: '500',
+    fontFamily: '$montserrat',
 
     svg: {
       fontSize: '12px',
     },
+  },
+
+  '.author': {
+    marginTop: '5px',
+    fontFamily: '$montserrat',
   },
 });
 
@@ -29,4 +35,5 @@ export const QuoteRefresh = styled('button', {
   background: 'none',
   border: 'none',
   cursor: 'pointer',
+  padding: '4px',
 });

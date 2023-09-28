@@ -5,6 +5,7 @@ export const SearchBookItems = styled('div', {
   textAlign: 'center',
   margin: '10px',
   padding: '10px',
+  fontFamily: '$noto',
 });
 
 export const ItemImg = styled('img', {
