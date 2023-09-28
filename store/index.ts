@@ -1,12 +1,12 @@
-import { create } from 'zustand';
-import { devtools } from 'zustand/middleware';
+import { create } from "zustand";
+import { devtools } from "zustand/middleware";
 
-import { InitialStateType, useStoreType } from './type';
+import { InitialStateType, useStoreType } from "./type";
 
 const initialState: InitialStateType = {
   isDarkMode: false,
   isLoading: false,
-  searchKeyword: '리액트',
+  searchKeyword: "리액트",
 };
 
 export const useStore = create<useStoreType>()(
@@ -23,7 +23,6 @@ export const useStore = create<useStoreType>()(
       }));
     },
     setSearchKeyword: (payload) => {
-      console.log(payload);
       set((state) => ({
         searchKeyword: payload,
       }));
