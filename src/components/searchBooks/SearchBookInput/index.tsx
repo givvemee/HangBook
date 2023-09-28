@@ -1,29 +1,33 @@
-'use client';
+"use client";
 
-import { useRef, useState } from 'react';
-import { IoSearchSharp } from 'react-icons/io5';
-import { InputType } from '../type';
-import { SearchForm, SearchIcon, SearchInput } from './style';
+import { KeyboardEvent, useEffect, useRef, useState } from "react";
+import { IoSearchSharp } from "react-icons/io5";
+import { InputType } from "../type";
+import { SearchForm, SearchIcon, SearchInput } from "./style";
+import { useStore } from "store";
 
 const SearchBookInput = ({ searching }: InputType) => {
   const textRef = useRef<HTMLInputElement>(null);
-  const [text, setText] = useState('react');
+  const { searchKeyword, setSearchKeyword } = useStore();
 
   const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!text) return;
-    searching(text);
-    setText('');
     textRef?.current?.focus();
   };
+
+  useEffect(() => {
+    if (!searchKeyword) {
+      setSearchKeyword("react");
+    }
+  }, []);
 
   return (
     <SearchForm onSubmit={onSubmit}>
       <SearchInput
         type="text"
         placeholder="Find the book."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        value={searchKeyword}
+        onChange={(e) => setSearchKeyword(e.target.value)}
         ref={textRef}
       />
       <SearchIcon>

@@ -6,7 +6,7 @@ import { InitialStateType, useStoreType } from "./type";
 const initialState: InitialStateType = {
   isDarkMode: false,
   isLoading: false,
-  searchKeyword: "리액트",
+  searchKeyword: "react",
 };
 
 export const useStore = create<useStoreType>()(
