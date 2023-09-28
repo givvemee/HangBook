@@ -1,11 +1,12 @@
-'use client';
-import { usePathname, useRouter } from 'next/navigation';
-import { NAV_LIST } from './init';
-import { Arrow, MenuLink, MenuList, NavContainer, NavListWrap } from './style';
+"use client";
+import { usePathname, useRouter } from "next/navigation";
+import { NAV_LIST } from "./init";
+import { Arrow, MenuLink, MenuList, NavContainer, NavListWrap } from "./style";
 
 const Nav = () => {
   const pathname = usePathname();
   const router = useRouter();
+
   return (
     <NavContainer>
       <nav>
@@ -13,7 +14,7 @@ const Nav = () => {
           {NAV_LIST.map((item, index) => (
             <MenuList key={index}>
               <MenuLink
-                href={`/${item.path}`}
+                onClick={() => router.push(item.path)}
                 isActive={pathname === item.path}
               >
                 <span>{item.tap}</span>
