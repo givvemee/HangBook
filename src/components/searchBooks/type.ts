@@ -1,9 +1,8 @@
-import { ItemType } from '../today/TodayItem/type';
+import { ItemType } from "../today/TodayItem/type";
+import useStates from "./state";
 
 export type PropsType = {
   books: ItemType;
 };
 
-export type InputType = {
-  searching: (val: string) => void;
-};
+export type StatesType = ReturnType<typeof useStates>;

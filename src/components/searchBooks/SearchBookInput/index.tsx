@@ -1,19 +1,20 @@
-'use client';
+"use client";
 
-import { useRef, useState } from 'react';
-import { IoSearchSharp } from 'react-icons/io5';
-import { InputType } from '../type';
-import { SearchForm, SearchIcon, SearchInput } from './style';
+import { useRef } from "react";
+import { IoSearchSharp } from "react-icons/io5";
+import { SearchForm, SearchIcon, SearchInput } from "./style";
+import { useStore } from "store";
+import useHandler from "../handler";
+import useStates from "../state";
 
-const SearchBookInput = ({ searching }: InputType) => {
+const SearchBookInput = () => {
+  const state = useStates();
+  const { searchData } = useHandler(state);
   const textRef = useRef<HTMLInputElement>(null);
-  const [text, setText] = useState('react');
+  const { searchKeyword, setSearchKeyword } = useStore();
 
   const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!text) return;
-    searching(text);
-    setText('');
     textRef?.current?.focus();
   };
 
@@ -21,13 +22,13 @@ const SearchBookInput = ({ searching }: InputType) => {
     <SearchForm onSubmit={onSubmit}>
       <SearchInput
         type="text"
-        placeholder="Find the book."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        placeholder="검색어를 입력해 주세요."
+        value={searchKeyword}
+        onChange={(e) => setSearchKeyword(e.target.value)}
         ref={textRef}
       />
       <SearchIcon>
-        <IoSearchSharp />
+        <IoSearchSharp color={"#666"} onClick={searchData} />
       </SearchIcon>
     </SearchForm>
   );
