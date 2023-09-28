@@ -6,7 +6,8 @@ import { InitialStateType, useStoreType } from "./type";
 const initialState: InitialStateType = {
   isDarkMode: false,
   isLoading: false,
-  searchKeyword: "리액트",
+  searchKeyword: "react",
+  searchedData: [],
 };
 
 export const useStore = create<useStoreType>()(
@@ -18,6 +19,7 @@ export const useStore = create<useStoreType>()(
       }));
     },
     setIsLoading: () => {
+      console.log(1, initialState.isLoading);
       set((state) => ({
         isLoading: !state.isLoading,
       }));
@@ -25,6 +27,11 @@ export const useStore = create<useStoreType>()(
     setSearchKeyword: (payload) => {
       set((state) => ({
         searchKeyword: payload,
+      }));
+    },
+    setSearchedData: (payload) => {
+      set((state) => ({
+        searchedData: payload,
       }));
     },
   }))
