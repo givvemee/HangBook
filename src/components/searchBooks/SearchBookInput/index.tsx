@@ -1,12 +1,15 @@
 "use client";
 
-import { KeyboardEvent, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { IoSearchSharp } from "react-icons/io5";
-import { InputType } from "../type";
 import { SearchForm, SearchIcon, SearchInput } from "./style";
 import { useStore } from "store";
+import useHandler from "../handler";
+import useStates from "../state";
 
-const SearchBookInput = ({ searching }: InputType) => {
+const SearchBookInput = () => {
+  const state = useStates();
+  const { searchData } = useHandler(state);
   const textRef = useRef<HTMLInputElement>(null);
   const { searchKeyword, setSearchKeyword } = useStore();
 
@@ -15,23 +18,17 @@ const SearchBookInput = ({ searching }: InputType) => {
     textRef?.current?.focus();
   };
 
-  useEffect(() => {
-    if (!searchKeyword) {
-      setSearchKeyword("react");
-    }
-  }, []);
-
   return (
     <SearchForm onSubmit={onSubmit}>
       <SearchInput
         type="text"
-        placeholder="Find the book."
+        placeholder="검색어를 입력해 주세요."
         value={searchKeyword}
         onChange={(e) => setSearchKeyword(e.target.value)}
         ref={textRef}
       />
       <SearchIcon>
-        <IoSearchSharp />
+        <IoSearchSharp color={"#666"} onClick={searchData} />
       </SearchIcon>
     </SearchForm>
   );
