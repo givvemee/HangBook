@@ -1,4 +1,4 @@
-import { Head, HeadWrap, HeaderTitle } from './style';
+import { Head, HeadWrap, HeaderTitle } from "./style";
 
 const Header = () => {
   return (

@@ -1,13 +1,13 @@
-'use client';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useStore } from 'store';
-import Loading from '../common/loading/index';
-import { PageTitle } from '../common/style';
-import { ItemType } from '../today/TodayItem/type';
-import { bestSellersApi } from '../utils';
-import BestSellersList from './BestSellersList';
-import { BestSellerWrap } from './style';
+"use client";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useStore } from "store";
+import Loading from "../common/loading/index";
+import { PageTitle } from "../common/style";
+import { ItemType } from "../today/TodayItem/type";
+import { bestSellersApi } from "../utils";
+import BestSellersList from "./BestSellersList";
+import { BestSellerWrap } from "./style";
 
 const BestSellerContainer = () => {
   const { isLoading, setIsLoading } = useStore();
@@ -26,10 +26,6 @@ const BestSellerContainer = () => {
     };
     getData();
   }, []);
-
-  useEffect(() => {
-    console.log(1, bestSellers);
-  }, [bestSellers]);
 
   return (
     <>
