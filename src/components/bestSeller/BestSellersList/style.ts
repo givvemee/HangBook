@@ -55,7 +55,7 @@ export const DetailsWrap = styled("div", {
   zIndex: 99,
   borderRadius: "20px",
   overflow: "hidden",
-  padding: "30px",
+  padding: "20px",
   display: "flex",
   color: "#fff",
   fontFamily: "$noto",
