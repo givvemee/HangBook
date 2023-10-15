@@ -53,6 +53,17 @@
 
 <br/>
 
+#### 🏃 How to run code
+
+해당 레포지토리를 로컬 서버에 띄우고 싶다면 아래 절차를 수행하세요.
+( ⚠️ 해당 프로젝트의 환경 변수는 vercel 을 통해 관리되고 있으므로 로컬 서버 실행은 코드 참고 용도입니다.)
+
+- `https://github.com/givvemee/HangBook.git` 명령어로 레포지토리 클론
+- `yarn` 명령어로 의존성 설치
+- 그 다음, `yarn dev` 로 로컬 환경에서 실행
+
+  <br />
+
 #### 📌 SUMMARY
 
 - **프로젝트 명** Hang-Book (Haning-Out with Books)
@@ -74,4 +85,5 @@
 <hr/>
 
 #### 🖥 PREVIEW
+
 <a href="https://hangbook.vercel.app/">**Click to visit preview**</a>
